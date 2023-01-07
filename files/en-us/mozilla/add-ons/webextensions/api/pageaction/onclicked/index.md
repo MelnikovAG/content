@@ -13,6 +13,7 @@ tags:
   - pageAction
 browser-compat: webextensions.api.pageAction.onClicked
 ---
+
 {{AddonSidebar()}}
 
 Fired when a page action icon is clicked. This event will not fire if the page action has a popup.
@@ -21,7 +22,7 @@ To define a right-click action, use the {{WebExtAPIRef('contextMenus')}} API wit
 
 ## Syntax
 
-```js
+```js-nolint
 browser.pageAction.onClicked.addListener(listener)
 browser.pageAction.onClicked.removeListener(listener)
 browser.pageAction.onClicked.hasListener(listener)
@@ -80,10 +81,9 @@ browser.pageAction.onClicked.addListener(() => {
 > **Note:**
 >
 > This API is based on Chromium's [`chrome.pageAction`](https://developer.chrome.com/docs/extensions/reference/pageAction/#event-onClicked) API. This documentation is derived from [`page_action.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/page_action.json) in the Chromium code.
->
-> Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.
 
-<div class="hidden"><pre>// Copyright 2015 The Chromium Authors. All rights reserved.
+<!--
+// Copyright 2015 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
@@ -110,4 +110,4 @@ browser.pageAction.onClicked.addListener(() => {
 // THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-</pre></div>
+-->

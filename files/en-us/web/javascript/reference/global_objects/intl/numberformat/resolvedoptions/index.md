@@ -1,6 +1,7 @@
 ---
 title: Intl.NumberFormat.prototype.resolvedOptions()
 slug: Web/JavaScript/Reference/Global_Objects/Intl/NumberFormat/resolvedOptions
+page-type: javascript-instance-method
 tags:
   - Internationalization
   - Intl
@@ -12,6 +13,7 @@ tags:
   - Reference
 browser-compat: javascript.builtins.Intl.NumberFormat.resolvedOptions
 ---
+
 {{JSRef}}
 
 The **`Intl.NumberFormat.prototype.resolvedOptions()`** method returns a new object with properties reflecting the [locale and number formatting options](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/NumberFormat/NumberFormat#parameters) computed during initialization of this {{jsxref("Intl.NumberFormat")}} object.
@@ -22,7 +24,7 @@ The **`Intl.NumberFormat.prototype.resolvedOptions()`** method returns a new obj
 
 ## Syntax
 
-```js
+```js-nolint
 resolvedOptions()
 ```
 

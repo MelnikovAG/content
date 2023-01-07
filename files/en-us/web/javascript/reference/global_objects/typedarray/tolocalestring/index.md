@@ -1,6 +1,7 @@
 ---
 title: TypedArray.prototype.toLocaleString()
 slug: Web/JavaScript/Reference/Global_Objects/TypedArray/toLocaleString
+page-type: javascript-instance-method
 tags:
   - ECMAScript 2015
   - JavaScript
@@ -10,6 +11,7 @@ tags:
   - TypedArrays
 browser-compat: javascript.builtins.TypedArray.toLocaleString
 ---
+
 {{JSRef}}
 
 The **`toLocaleString()`** method returns a string representing
@@ -22,7 +24,7 @@ for each element. _TypedArray_ is one of the
 
 ## Syntax
 
-```js
+```js-nolint
 toLocaleString()
 toLocaleString(locales)
 toLocaleString(locales, options)
@@ -54,10 +56,10 @@ uint.toLocaleString();
 // if run in a de-DE locale
 // "2.000,500,8.123,12,4.212"
 
-uint.toLocaleString('en-US');
+uint.toLocaleString("en-US");
 // "2,000,500,8,123,12,4,212"
 
-uint.toLocaleString('ja-JP', { style: 'currency', currency: 'JPY' });
+uint.toLocaleString("ja-JP", { style: "currency", currency: "JPY" });
 // "￥2,000,￥500,￥8,123,￥12,￥4,212"
 ```
 

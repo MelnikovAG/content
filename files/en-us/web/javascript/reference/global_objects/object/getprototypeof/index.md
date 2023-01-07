@@ -1,6 +1,7 @@
 ---
 title: Object.getPrototypeOf()
 slug: Web/JavaScript/Reference/Global_Objects/Object/getPrototypeOf
+page-type: javascript-static-method
 tags:
   - ECMAScript 5
   - JavaScript
@@ -9,9 +10,10 @@ tags:
   - Polyfill
 browser-compat: javascript.builtins.Object.getPrototypeOf
 ---
+
 {{JSRef}}
 
-The **`Object.getPrototypeOf()`** method returns the prototype
+The **`Object.getPrototypeOf()`** static method returns the prototype
 (i.e. the value of the internal `[[Prototype]]` property) of the specified
 object.
 
@@ -19,7 +21,7 @@ object.
 
 ## Syntax
 
-```js
+```js-nolint
 Object.getPrototypeOf(obj)
 ```
 

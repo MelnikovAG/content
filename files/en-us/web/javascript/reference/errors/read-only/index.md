@@ -1,12 +1,14 @@
 ---
 title: 'TypeError: "x" is read-only'
 slug: Web/JavaScript/Reference/Errors/Read-only
+page-type: javascript-error
 tags:
   - Error
   - Errors
   - JavaScript
   - TypeError
 ---
+
 {{jsSidebar("Errors")}}
 
 The JavaScript [strict mode](/en-US/docs/Web/JavaScript/Reference/Strict_mode)-only exception

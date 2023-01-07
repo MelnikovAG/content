@@ -6,6 +6,7 @@ tags:
   - Event
 browser-compat: api.Window.message_event
 ---
+
 {{APIRef}}
 
 The `message` event is fired on a {{domxref('Window')}} object when the window receives a message, for example from a call to [`Window.postMessage()`](/en-US/docs/Web/API/Window/postMessage) from another browsing context.
@@ -39,7 +40,7 @@ _This interface also inherits properties from its parent, {{domxref("Event")}}._
 - {{domxref("MessageEvent.lastEventId")}} {{ReadOnlyInline}}
   - : A string representing a unique ID for the event.
 - {{domxref("MessageEvent.source")}} {{ReadOnlyInline}}
-  - : A `MessageEventSource` (which can be a {{domxref("WindowProxy")}}, {{domxref("MessagePort")}}, or {{domxref("ServiceWorker")}} object) representing the message emitter.
+  - : A `MessageEventSource` (which can be a {{glossary("WindowProxy")}}, {{domxref("MessagePort")}}, or {{domxref("ServiceWorker")}} object) representing the message emitter.
 - {{domxref("MessageEvent.ports")}} {{ReadOnlyInline}}
   - : An array of {{domxref("MessagePort")}} objects representing the ports associated with the channel the message is being sent through (where appropriate, e.g. in channel messaging or when sending a message to a shared worker).
 

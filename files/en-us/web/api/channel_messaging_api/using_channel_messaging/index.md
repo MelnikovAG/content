@@ -13,6 +13,7 @@ browser-compat:
   - api.MessageChannel
   - api.MessagePort
 ---
+
 {{DefaultAPISidebar("Channel Messaging API")}}
 
 The [Channel Messaging API](/en-US/docs/Web/API/Channel_Messaging_API) allows two separate scripts running in different browsing contexts attached to the same document (e.g., two {{HTMLElement("iframe")}} elements, the main document and a single {{HTMLElement("iframe")}}, or two documents via a {{domxref("SharedWorker")}}) to communicate directly, passing messages between each other through two-way channels (or pipes) with a port at each end.
@@ -37,7 +38,7 @@ Second, have a look at our [multimessaging demo](https://github.com/mdn/dom-exam
 
 We'll be focusing on the latter example in this article, which looks like:
 
-![](channel-messaging-demo.png)
+![Demo with "Hello this is my demo" sent as five separate messages. The messages are displayed as a bulleted list.](channel-messaging-demo.png)
 
 ## Creating the channel
 

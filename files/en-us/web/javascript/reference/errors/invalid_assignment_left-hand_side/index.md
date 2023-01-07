@@ -1,12 +1,14 @@
 ---
 title: 'SyntaxError: invalid assignment left-hand side'
 slug: Web/JavaScript/Reference/Errors/Invalid_assignment_left-hand_side
+page-type: javascript-error
 tags:
   - Error
   - Errors
   - JavaScript
   - SyntaxError
 ---
+
 {{jsSidebar("Errors")}}
 
 The JavaScript exception "invalid assignment left-hand side" occurs when there was an

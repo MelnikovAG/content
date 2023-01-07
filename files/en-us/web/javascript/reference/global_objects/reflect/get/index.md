@@ -1,6 +1,7 @@
 ---
 title: Reflect.get()
 slug: Web/JavaScript/Reference/Global_Objects/Reflect/get
+page-type: javascript-static-method
 tags:
   - ECMAScript 2015
   - JavaScript
@@ -10,16 +11,17 @@ tags:
   - Polyfill
 browser-compat: javascript.builtins.Reflect.get
 ---
+
 {{JSRef}}
 
-The static **`Reflect.get()`** method works like getting a
+The **`Reflect.get()`** static method works like getting a
 property from an object (`target[propertyKey]`) as a function.
 
 {{EmbedInteractiveExample("pages/js/reflect-get.html")}}
 
 ## Syntax
 
-```js
+```js-nolint
 Reflect.get(target, propertyKey)
 Reflect.get(target, propertyKey, receiver)
 ```

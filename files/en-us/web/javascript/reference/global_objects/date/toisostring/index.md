@@ -1,6 +1,7 @@
 ---
 title: Date.prototype.toISOString()
 slug: Web/JavaScript/Reference/Global_Objects/Date/toISOString
+page-type: javascript-instance-method
 tags:
   - Date
   - JavaScript
@@ -10,6 +11,7 @@ tags:
   - polyfill
 browser-compat: javascript.builtins.Date.toISOString
 ---
+
 {{JSRef}}
 
 The **`toISOString()`** method returns a string in _simplified_ extended ISO format ([ISO 8601](https://en.wikipedia.org/wiki/ISO_8601)), which is always 24 or 27 characters long (`YYYY-MM-DDTHH:mm:ss.sssZ` or `±YYYYYY-MM-DDTHH:mm:ss.sssZ`, respectively). The timezone is always zero UTC offset, as denoted by the suffix `Z`.
@@ -18,7 +20,7 @@ The **`toISOString()`** method returns a string in _simplified_ extended ISO for
 
 ## Syntax
 
-```js
+```js-nolint
 toISOString()
 ```
 
@@ -31,7 +33,7 @@ A string representing the given date in the [ISO 8601](https://en.wikipedia.org/
 ### Using toISOString()
 
 ```js
-const today = new Date('05 October 2011 14:48 UTC');
+const today = new Date("05 October 2011 14:48 UTC");
 
 console.log(today.toISOString()); // Returns 2011-10-05T14:48:00.000Z
 ```

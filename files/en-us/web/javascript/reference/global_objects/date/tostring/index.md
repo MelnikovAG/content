@@ -1,6 +1,7 @@
 ---
 title: Date.prototype.toString()
 slug: Web/JavaScript/Reference/Global_Objects/Date/toString
+page-type: javascript-instance-method
 tags:
   - Date
   - JavaScript
@@ -9,6 +10,7 @@ tags:
   - Reference
 browser-compat: javascript.builtins.Date.toString
 ---
+
 {{JSRef}}
 
 The **`toString()`** method returns a string representing the specified {{jsxref("Date")}} object interpreted in the local timezone.
@@ -17,7 +19,7 @@ The **`toString()`** method returns a string representing the specified {{jsxref
 
 ## Syntax
 
-```js
+```js-nolint
 toString()
 ```
 

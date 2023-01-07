@@ -9,14 +9,15 @@ tags:
   - Experimental
 browser-compat: api.NDEFRecord.recordType
 ---
-{{SecureContext_Header}}{{SeeCompatTable}}{{APIRef}}
+
+{{SecureContext_Header}}{{SeeCompatTable}}{{APIRef("Web NFC API")}}
 
 The **`recordType`**
 property of the {{DOMxRef("NDEFRecord")}} interface returns the record type of the record.
 
 ## Syntax
 
-```js
+```js-nolint
 NDEFRecord.recordType
 ```
 

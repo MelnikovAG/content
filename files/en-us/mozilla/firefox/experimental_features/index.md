@@ -7,6 +7,7 @@ tags:
   - Preferences
   - features
 ---
+
 {{FirefoxSidebar}}
 
 This page lists Firefox's experimental and partially implemented features, including those for proposed or cutting-edge web platform standards, along with information on the builds in which they are present, whether or not they are activated "by default", and which _preference_ can be used to activate or deactivate them.
@@ -144,7 +145,7 @@ HTML password input elements ([`<input type="password">`](/en-US/docs/Web/HTML/E
 
 ## CSS
 
-### Display stray control characters in CSS as hex boxes
+### Hex boxes to display stray control characters
 
 This feature renders control characters (Unicode category Cc) other than _tab_ (`U+0009`), _line feed_ (`U+000A`), _form feed_ (`U+000C`), and _carriage return_ (`U+000D`) as a hexbox when they are not expected. (See {{bug(1099557)}} for more details.)
 
@@ -187,7 +188,7 @@ This feature renders control characters (Unicode category Cc) other than _tab_ (
   </tbody>
 </table>
 
-### Property: initial-letter
+### initial-letter property
 
 The {{cssxref("initial-letter")}} CSS property is part of the [CSS Inline Layout](https://drafts.csswg.org/css-inline/) specification and allows you to specify how dropped, raised, and sunken initial letters are displayed. (See {{bug(1223880)}} for more details.)
 
@@ -267,7 +268,7 @@ Support for using a single {{cssxref("number")}} as a {{cssxref("ratio")}} when 
   </tbody>
 </table>
 
-### Property: backdrop-filter
+### backdrop-filter property
 
 The {{cssxref("backdrop-filter")}} property applies filter effects to the area behind an element. (See {{bug(1178765)}} for more details.)
 
@@ -307,7 +308,7 @@ The {{cssxref("backdrop-filter")}} property applies filter effects to the area b
   </tbody>
 </table>
 
-### Grid: Masonry layout
+### Masonry grid layout
 
 Adds support for a [masonry-style layout](/en-US/docs/Web/CSS/CSS_Grid_Layout/Masonry_Layout) based on grid layout where one axis has a masonry layout and the other has a normal grid layout. This allows developers to easily create gallery style layouts like on Pinterest. See {{bug(1607954)}} for more details.
 
@@ -349,7 +350,7 @@ Adds support for a [masonry-style layout](/en-US/docs/Web/CSS/CSS_Grid_Layout/Ma
   </tbody>
 </table>
 
-### Property: math-style
+### math-style property
 
 The {{cssxref("math-style")}} property indicates whether MathML equations should render with normal or compact height. (See {{bug(1665975)}} for more details.)
 
@@ -389,7 +390,7 @@ The {{cssxref("math-style")}} property indicates whether MathML equations should
   </tbody>
 </table>
 
-### Function: fit-content()
+### fit-content() function
 
 The {{cssxref("fit-content_function", "fit-content()")}} function as it applies to {{cssxref("width")}} and other sizing properties. This function is already well-supported for CSS Grid Layout track sizing. (See {{bug(1312588)}} for more details.)
 
@@ -431,9 +432,12 @@ The {{cssxref("fit-content_function", "fit-content()")}} function as it applies 
 
 ### Scroll-linked animations
 
-The {{cssxref('@scroll-timeline')}} at-rule and {{cssxref('animation-timeline')}} property allow you to define animations that are linked to container scroll progress (rather than time).
-Once specified, a scroll timeline is associated with a [CSS Animation](/en-US/docs/Web/CSS/CSS_Animations) by using the `animation-timeline` property.
-For more information, see {{bug(1676791)}} and {{bug(1676782)}}.
+A scroll-linked animation is one in which the animation depends on the scroll position of a scrollbar instead of time, or some other dimension.
+The {{cssxref('scroll-timeline-name')}} and {{cssxref('scroll-timeline-axis')}} properties (and {{cssxref('scroll-timeline')}} shorthand property) allow you to specify that a particular scrollbar in a particular named container can be used as the source for a scroll-linked animation.
+The scroll timeline can then be associated with an [animation](/en-US/docs/Web/CSS/CSS_Animations) by setting the {{cssxref('animation-timeline')}} property to the name value that was set in `scroll-timeline-name`.
+
+You can alternatively use the [`scroll()`](/en-US/docs/Web/CSS/animation-timeline/scroll) functional notation with {{cssxref('animation-timeline')}} to indicate that a scrollbar axis in an ancestor element will be used for the timeline.
+For more information, see {{bug(1676791)}}, {{bug(1754897)}}, and {{bug(1737918)}}.
 
 <table>
   <thead>
@@ -446,22 +450,22 @@ For more information, see {{bug(1676791)}} and {{bug(1676782)}}.
   <tbody>
     <tr>
       <th>Nightly</th>
-      <td>97</td>
+      <td>101</td>
       <td>No</td>
     </tr>
     <tr>
       <th>Developer Edition</th>
-      <td>97</td>
+      <td>101</td>
       <td>No</td>
     </tr>
     <tr>
       <th>Beta</th>
-      <td>97</td>
+      <td>101</td>
       <td>No</td>
     </tr>
     <tr>
       <th>Release</th>
-      <td>97</td>
+      <td>101</td>
       <td>No</td>
     </tr>
     <tr>
@@ -471,9 +475,50 @@ For more information, see {{bug(1676791)}} and {{bug(1676782)}}.
   </tbody>
 </table>
 
-### Function: linear() easing
+### :has() pseudo-class
 
-The `linear(...)` [easing function](/en-US/docs/Web/CSS/easing-function) defines a piecewise linear function, allowing you to approximate more complex animations.
+The [`:has()`](/en-US/docs/Web/CSS/:has) pseudo-class selects elements that contain the selectors passed as parameters.
+(See {{bug(1771896)}} for more details.)
+
+<table>
+  <thead>
+    <tr>
+      <th>Release channel</th>
+      <th>Version added</th>
+      <th>Enabled by default?</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>Nightly</th>
+      <td>103</td>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th>Developer Edition</th>
+      <td>103</td>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th>Beta</th>
+      <td>103</td>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th>Release</th>
+      <td>103</td>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th>Preference name</th>
+      <td colspan="2"><code>layout.css.has-selector.enabled</code></td>
+    </tr>
+  </tbody>
+</table>
+
+### linear() easing function
+
+The `linear()` [easing function](/en-US/docs/Web/CSS/easing-function) defines a piecewise linear function, allowing you to approximate more complex animations.
 (See {{bug(1764126)}} for more details.)
 
 <table>
@@ -512,7 +557,7 @@ The `linear(...)` [easing function](/en-US/docs/Web/CSS/easing-function) defines
   </tbody>
 </table>
 
-### Property: animation-composition
+### animation-composition property
 
 The [`animation-composition`](/en-US/docs/Web/CSS/animation-composition) property specifies the composite operation to perform when multiple animations affect the same property simultaneously.
 (See {{bug(1293490)}} for more details.)
@@ -549,6 +594,171 @@ The [`animation-composition`](/en-US/docs/Web/CSS/animation-composition) propert
     <tr>
       <th>Preference name</th>
       <td colspan="2"><code>layout.css.animation-composition.enabled</code></td>
+    </tr>
+  </tbody>
+</table>
+
+### @font-face src feature checking
+
+The `@font-face` [`src` descriptor](/en-US/docs/Web/CSS/@font-face/src) now supports the `tech()` function, allowing fallback of whether a font resource is downloaded based on whether the user-agent supports a particular font feature or technology.
+See {{bug(1715546)}} for more details.
+
+<table>
+  <thead>
+    <tr>
+      <th>Release channel</th>
+      <th>Version added</th>
+      <th>Enabled by default?</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>Nightly</th>
+      <td>105</td>
+      <td>Yes</td>
+    </tr>
+    <tr>
+      <th>Developer Edition</th>
+      <td>105</td>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th>Beta</th>
+      <td>105</td>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th>Release</th>
+      <td>105</td>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th>Preference name</th>
+      <td colspan="2"><code>layout.css.font-tech.enabled</code></td>
+    </tr>
+  </tbody>
+</table>
+
+### Container queries
+
+Container queries allow you to apply CSS styles to elements based on the size of their container as opposed to the size of the viewport or other device characteristics.
+The CSS length units `cqw`, `cqh`, `cqi`, `cqb`, `cqmin`, `cqmax` are units of length relative to the size of a query container and are supported as part of this functionality.
+For more information, see the [CSS Container Queries](/en-US/docs/Web/CSS/CSS_Container_Queries#container_query_length_units) page and the [Container query length units](/en-US/docs/Web/CSS/CSS_Container_Queries#container_query_length_units) section ({{bug(1744231)}}, {{bug(1801123)}}).
+
+<table>
+  <thead>
+    <tr>
+      <th>Release channel</th>
+      <th>Version added</th>
+      <th>Enabled by default?</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>Nightly</th>
+      <td>109</td>
+      <td>Yes</td>
+    </tr>
+    <tr>
+      <th>Developer Edition</th>
+      <td>108</td>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th>Beta</th>
+      <td>108</td>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th>Release</th>
+      <td>108</td>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th>Preference name</th>
+      <td colspan="2"><code>layout.css.container-queries.enabled</code></td>
+    </tr>
+  </tbody>
+</table>
+
+### round() math function
+
+The CSS [`round()`](/en-US/docs/Web/CSS/round) function is a math function that rounds a number (or the result of an expression) based on a selected rounding strategy.
+See {{bug(1764850)}} for more details.
+
+<table>
+  <thead>
+    <tr>
+      <th>Release channel</th>
+      <th>Version added</th>
+      <th>Enabled by default?</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>Nightly</th>
+      <td>108</td>
+      <td>Yes</td>
+    </tr>
+    <tr>
+      <th>Developer Edition</th>
+      <td>108</td>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th>Beta</th>
+      <td>108</td>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th>Release</th>
+      <td>108</td>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th>Preference name</th>
+      <td colspan="2"><code>layout.css.round.enabled</code></td>
+    </tr>
+  </tbody>
+</table>
+
+### font-variant-emoji
+
+The CSS [`font-variant-emoji`](/en-US/docs/Web/CSS/font-variant-emoji) property allows you to set a default presentation style for displaying emojis.
+See ({{bug(1461589)}}) for more details.
+
+<table>
+  <thead>
+    <tr>
+      <th>Release channel</th>
+      <th>Version added</th>
+      <th>Enabled by default?</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>Nightly</th>
+      <td>108</td>
+      <td>Yes</td>
+    </tr>
+    <tr>
+      <th>Developer Edition</th>
+      <td>108</td>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th>Beta</th>
+      <td>108</td>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th>Release</th>
+      <td>108</td>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th>Preference name</th>
+      <td colspan="2"><code>layout.css.font-variant-emoji.enabled</code></td>
     </tr>
   </tbody>
 </table>
@@ -813,7 +1023,7 @@ This new API provides low-level support for performing computation and graphics 
 
 ### WebRTC and media
 
-The following experimental features include those found in the [WebRTC API](/en-US/docs/Web/API/WebRTC_API), the [Web Audio API](/en-US/docs/Web/API/Web_Audio_API), the [Media Source Extensions API](/en-US/docs/Web/API/Media_Source_Extensions_API), the [Encrypted Media Extensions API](/en-US/docs/Web/API/Encrypted_Media_Extensions_API), and the [Media Capture and Streams API](/en-US/docs/Web/API/Media_Streams_API).
+The following experimental features include those found in the [WebRTC API](/en-US/docs/Web/API/WebRTC_API), the [Web Audio API](/en-US/docs/Web/API/Web_Audio_API), the [Media Source Extensions API](/en-US/docs/Web/API/Media_Source_Extensions_API), the [Encrypted Media Extensions API](/en-US/docs/Web/API/Encrypted_Media_Extensions_API), and the [Media Capture and Streams API](/en-US/docs/Web/API/Media_Capture_and_Streams_API).
 
 #### Asynchronous SourceBuffer add and remove
 
@@ -978,6 +1188,48 @@ With this feature enabled, Firefox supports [JPEG XL](https://jpeg.org/jpegxl/) 
     <tr>
       <th>Preference name</th>
       <td colspan="2"><code>image.jxl.enabled</code></td>
+    </tr>
+  </tbody>
+</table>
+
+#### OpenFont COLRv1 fonts
+
+This feature provides support for the [OpenFont COLRv1 font specification](https://docs.microsoft.com/en-us/typography/opentype/spec/).
+This enables compression-friendly color vector fonts with gradients, compositing and blending to be loaded using the CSS [`@font-face`](/en-US/docs/Web/CSS/@font-face) rule, or the [CSS Font Loading API](/en-US/docs/Web/API/CSS_Font_Loading_API).
+See {{bug(1740530)}} for more details.
+
+<table>
+  <thead>
+    <tr>
+      <th>Release channel</th>
+      <th>Version added</th>
+      <th>Enabled by default?</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>Nightly</th>
+      <td>105</td>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th>Developer Edition</th>
+      <td>105</td>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th>Beta</th>
+      <td>105</td>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th>Release</th>
+      <td>105</td>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th>Preference name</th>
+      <td colspan="2"><code>gfx.font_rendering.colr_v1.enabled</code></td>
     </tr>
   </tbody>
 </table>
@@ -1272,7 +1524,7 @@ The {{domxref('HTML Sanitizer API')}} allow developers to take untrusted strings
 
 #### Document property: autoplayPolicy
 
-The {{domxref("document")}} property {{domxref("Document.autoplayPolicy", "autoplayPolicy")}} returns a string indicating how the browser handles requests to automatically play media (either using the {{domxref("HTMLMediaElement.autoplay", "autoplay")}} property on a media element or by attempting to trigger playback from JavaScript code. The spec for this API is still being written. The value changes over time depending on what the user is doing, their preferences, and the state of the browser in general. Potential values include `allowed` (autoplay is currently permitted), `allowed-muted` (autoplay is allowed but only with no—or muted—audio), and `disallowed` (autoplay is not allowed at this time). See {{bug(1506289)}} for more details.
+The {{domxref("document")}} property autoplayPolicy returns a string indicating how the browser handles requests to automatically play media (either using the {{domxref("HTMLMediaElement.autoplay", "autoplay")}} property on a media element or by attempting to trigger playback from JavaScript code. The spec for this API is still being written. The value changes over time depending on what the user is doing, their preferences, and the state of the browser in general. Potential values include `allowed` (autoplay is currently permitted), `allowed-muted` (autoplay is allowed but only with no—or muted—audio), and `disallowed` (autoplay is not allowed at this time). See {{bug(1506289)}} for more details.
 
 <table>
   <thead>
@@ -1433,6 +1685,49 @@ See these bugs for details: {{bug(1556362)}}, {{bug(1556373)}}, {{bug(1556365)}}
     <tr>
       <th>Preference name</th>
       <td colspan="2"><code>dom.webcomponents.formAssociatedCustomElement.enabled</code></td>
+    </tr>
+  </tbody>
+</table>
+
+#### Document and Element scrollend events
+
+The `scrollend` event indicates that the user has completed scrolling in {{domxref("Element")}} and {{domxref("Document")}} objects.
+For more information, see [Element: `scrollend` event](/en-US/docs/Web/API/Element/scrollend_event) and [Document: `scrollend` event](/en-US/docs/Web/API/Document/scrollend_event) ({{bug(1797013)}}, {{bug(1803435)}}).
+
+<table>
+  <thead>
+    <tr>
+      <th>Release channel</th>
+      <th>Version added</th>
+      <th>Enabled by default?</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>Nightly</th>
+      <td>109</td>
+      <td>Yes</td>
+    </tr>
+    <tr>
+      <th>Developer Edition</th>
+      <td>108</td>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th>Beta</th>
+      <td>108</td>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th>Release</th>
+      <td>108</td>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th>Preference name</th>
+      <td>
+        <code>apz.scrollend-event.content.enabled</code>
+      </td>
     </tr>
   </tbody>
 </table>
@@ -1710,11 +2005,10 @@ This also changes the console warning; if the upgrade succeeds, the message indi
   </tbody>
 </table>
 
-### Feature policy
+### Permissions Policy / Feature policy
 
-[Feature Policy](/en-US/docs/Web/HTTP/Feature_Policy) allows web developers to selectively enable, disable, and modify the behavior of certain features and APIs in the browser. It is similar to CSP but controls features instead of security behavior.
-
-> **Note:** The `Feature-Policy` header has now been renamed to `Permissions-Policy` in the spec, and this article will eventually be updated to reflect that change.
+[Permissions Policy](/en-US/docs/Web/HTTP/Permissions_Policy) allows web developers to selectively enable, disable, and modify the behavior of certain features and APIs in the browser. It is similar to CSP but controls features instead of security behavior.
+Note that this is implemented in Firefox as "**Feature Policy**, the name used in an earlier version of the specification.
 
 <table>
   <thead>

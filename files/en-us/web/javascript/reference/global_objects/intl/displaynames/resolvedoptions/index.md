@@ -1,6 +1,7 @@
 ---
 title: Intl.DisplayNames.prototype.resolvedOptions()
 slug: Web/JavaScript/Reference/Global_Objects/Intl/DisplayNames/resolvedOptions
+page-type: javascript-instance-method
 tags:
   - DisplayNames
   - Internationalization
@@ -12,6 +13,7 @@ tags:
   - Reference
 browser-compat: javascript.builtins.Intl.DisplayNames.resolvedOptions
 ---
+
 {{JSRef}}
 
 The **`Intl.DisplayNames.prototype.resolvedOptions()`** method
@@ -21,7 +23,7 @@ object.
 
 ## Syntax
 
-```js
+```js-nolint
 resolvedOptions()
 ```
 

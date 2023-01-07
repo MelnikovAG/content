@@ -1,6 +1,7 @@
 ---
 title: <circle>
 slug: Web/SVG/Element/circle
+page-type: svg-element
 tags:
   - Circle
   - Element
@@ -9,6 +10,7 @@ tags:
   - SVG
 browser-compat: svg.elements.circle
 ---
+
 {{SVGRef}}
 
 The **`<circle>`** [SVG](/en-US/docs/Web/SVG) element is an [SVG basic shape](/en-US/docs/Web/SVG/Tutorial/Basic_Shapes), used to draw circles based on a center point and a radius.
@@ -16,12 +18,16 @@ The **`<circle>`** [SVG](/en-US/docs/Web/SVG) element is an [SVG basic shape](/e
 ## Example
 
 ```css hidden
-html,body,svg { height:100% }
+html,
+body,
+svg {
+  height: 100%;
+}
 ```
 
 ```html
 <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
-  <circle cx="50" cy="50" r="50"/>
+  <circle cx="50" cy="50" r="50" />
 </svg>
 ```
 

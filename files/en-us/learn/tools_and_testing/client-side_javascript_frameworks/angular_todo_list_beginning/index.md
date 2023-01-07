@@ -12,6 +12,7 @@ tags:
   - Components
   - Structure
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_getting_started","Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_styling", "Learn/Tools_and_testing/Client-side_JavaScript_frameworks")}}
 
 At this point, we are ready to start creating our to-do list application using Angular. The finished application will display a list of to-do items and includes editing, deleting, and adding features. In this article you will get to know your application structure, and work up to displaying a basic list of to-do items.
@@ -91,7 +92,7 @@ export interface Item {
 }
 ```
 
-You won't use this file until [later](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_item_component#add_logic_to_itemcomponent), but it is a good time to know and record your knowledge of what an `item` is. The `Item` `interface` creates an `item` object model so that your application will understand what an `item` is. For this to-do list, an `item` is an object that has a description and can be done.
+You won't use this file until [later](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_item_component#add_logic_to_itemcomponent), but it is a good time to know and record your knowledge of what an `item` is. The `Item` interface creates an `item` object model so that your application will understand what an `item` is. For this to-do list, an `item` is an object that has a description and can be done.
 
 ## Add logic to AppComponent
 
@@ -213,8 +214,7 @@ In `app.component.html`, replace the `<h2>` with the following:
   placeholder="add an item"
   (keyup.enter)="addItem(newItem.value); newItem.value = ''"
   class="lg-text-input"
-  id="addItemInput"
-/>
+  id="addItemInput" />
 
 <button class="btn-primary" (click)="addItem(newItem.value)">Add</button>
 ```

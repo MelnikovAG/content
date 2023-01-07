@@ -1,12 +1,14 @@
 ---
 title: 'SyntaxError: "0"-prefixed octal literals and octal escape seq. are deprecated'
 slug: Web/JavaScript/Reference/Errors/Deprecated_octal
+page-type: javascript-error
 tags:
   - Error
   - JavaScript
   - Strict Mode
   - SyntaxError
 ---
+
 {{jsSidebar("Errors")}}
 
 The JavaScript [strict mode](/en-US/docs/Web/JavaScript/Reference/Strict_mode)-only exception "0-prefixed octal literals and octal escape sequences are
@@ -15,7 +17,7 @@ literals and octal escape sequences are used.
 
 ## Message
 
-```
+```plain
 SyntaxError: Octal literals are not allowed in strict mode. (V8-based)
 SyntaxError: "0"-prefixed octal literals are deprecated; use the "0o" prefix instead (Firefox)
 SyntaxError: Decimal integer literals with a leading zero are forbidden in strict mode (Safari)

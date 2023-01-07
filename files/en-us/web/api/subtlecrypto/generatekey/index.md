@@ -11,6 +11,7 @@ tags:
   - generateKey
 browser-compat: api.SubtleCrypto.generateKey
 ---
+
 {{APIRef("Web Crypto API")}}{{SecureContext_header}}
 
 Use the **`generateKey()`** method of the
@@ -19,13 +20,14 @@ or key pair (for public-key algorithms).
 
 ## Syntax
 
-```js
+```js-nolint
 generateKey(algorithm, extractable, keyUsages)
 ```
 
 ### Parameters
 
 - `algorithm`
+
   - : An object defining the type of key to generate and providing extra algorithm-specific parameters.
 
     - For [RSASSA-PKCS1-v1_5](/en-US/docs/Web/API/SubtleCrypto/sign#rsassa-pkcs1-v1_5), [RSA-PSS](/en-US/docs/Web/API/SubtleCrypto/sign#rsa-pss),
@@ -38,6 +40,7 @@ generateKey(algorithm, extractable, keyUsages)
     - For [AES-CTR](/en-US/docs/Web/API/SubtleCrypto/encrypt#aes-ctr), [AES-CBC](/en-US/docs/Web/API/SubtleCrypto/encrypt#aes-cbc),
       [AES-GCM](/en-US/docs/Web/API/SubtleCrypto/encrypt#aes-gcm), or [AES-KW](/en-US/docs/Web/API/SubtleCrypto/wrapKey#aes-kw):
       pass an [`AesKeyGenParams`](/en-US/docs/Web/API/AesKeyGenParams) object.
+
 - `extractable`
   - : A boolean value indicating whether it
     will be possible to export the key using {{domxref("SubtleCrypto.exportKey()")}} or
@@ -57,8 +60,8 @@ generateKey(algorithm, extractable, keyUsages)
 ### Return value
 
 A {{jsxref("Promise")}} that fulfills with a
-  {{domxref("CryptoKey")}} (for symmetric algorithms) or a {{domxref("CryptoKeyPair")}}
-  (for public-key algorithms).
+{{domxref("CryptoKey")}} (for symmetric algorithms) or a {{domxref("CryptoKeyPair")}}
+(for public-key algorithms).
 
 ### Exceptions
 
@@ -152,4 +155,4 @@ let key = await window.crypto.subtle.generateKey(
 ## See also
 
 - [Cryptographic key length recommendations](https://www.keylength.com/).
-- [NIST Transitioning the Use of Cryptographic Algorithms and Key Lengths](https://csrc.nist.gov/publications/detail/sp/800-131a/rev-1/archive/2015-11-06).
+- [NIST Transitioning the Use of Cryptographic Algorithms and Key Lengths](https://csrc.nist.gov/publications/detail/sp/800-131a/rev-2/final).

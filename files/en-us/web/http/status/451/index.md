@@ -8,13 +8,14 @@ tags:
   - Status code
 browser-compat: http.status.451
 ---
+
 {{HTTPSidebar}}
 
 The HyperText Transfer Protocol (HTTP) **`451 Unavailable For Legal Reasons`** client error response code indicates that the user requested a resource that is not available due to legal reasons, such as a web page for which a legal action has been issued.
 
 ## Status
 
-```
+```http
 451 Unavailable For Legal Reasons
 ```
 

@@ -14,11 +14,12 @@ tags:
   - console
   - troubleshooting
 ---
+
 {{HTTPSidebar}}
 
 ## Reason
 
-```
+```plain
 Reason: CORS header 'Access-Control-Allow-Origin' does not match 'xyz'
 ```
 

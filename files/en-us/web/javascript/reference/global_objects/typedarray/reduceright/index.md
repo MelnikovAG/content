@@ -1,6 +1,7 @@
 ---
 title: TypedArray.prototype.reduceRight()
 slug: Web/JavaScript/Reference/Global_Objects/TypedArray/reduceRight
+page-type: javascript-instance-method
 tags:
   - JavaScript
   - Method
@@ -11,6 +12,7 @@ tags:
   - Polyfill
 browser-compat: javascript.builtins.TypedArray.reduceRight
 ---
+
 {{JSRef}}
 
 The **`reduceRight()`** method applies a function against an
@@ -21,7 +23,7 @@ single value. This method has the same algorithm as
 
 ## Syntax
 
-```js
+```js-nolint
 // Arrow function
 reduceRight((accumulator, currentValue) => { /* ... */ } )
 reduceRight((accumulator, currentValue, index) => { /* ... */ } )

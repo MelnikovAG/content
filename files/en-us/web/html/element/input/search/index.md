@@ -12,59 +12,11 @@ tags:
 browser-compat: html.elements.input.type_search
 ---
 
-{{HTMLRef("Input_types")}}
+{{HTMLSidebar}}
 
 {{HTMLElement("input")}} elements of type **`search`** are text fields designed for the user to enter search queries into. These are functionally identical to [`text`](/en-US/docs/Web/HTML/Element/input/text) inputs, but may be styled differently by the {{Glossary("user agent")}}.
 
 {{EmbedInteractiveExample("pages/tabbed/input-search.html", "tabbed-standard")}}
-
-<table class="properties">
-  <tbody>
-    <tr>
-      <td><strong><a href="#value">Value</a></strong></td>
-      <td>
-        A string representing the value contained in
-        the search field.
-      </td>
-    </tr>
-    <tr>
-      <td><strong>Events</strong></td>
-      <td>
-        {{domxref("HTMLElement/change_event", "change")}} and
-        {{domxref("HTMLElement/input_event", "input")}}
-      </td>
-    </tr>
-    <tr>
-      <td><strong>Supported Common Attributes</strong></td>
-      <td>
-        {{htmlattrxref("autocomplete", "input")}},
-        {{htmlattrxref("list", "input")}},
-        {{htmlattrxref("maxlength", "input")}},
-        {{htmlattrxref("minlength", "input")}},
-        {{htmlattrxref("pattern", "input")}},
-        {{htmlattrxref("placeholder", "input")}},
-        {{htmlattrxref("required", "input")}},
-        {{htmlattrxref("size", "input")}}.
-      </td>
-    </tr>
-    <tr>
-      <td><strong>IDL attributes</strong></td>
-      <td><code>value</code></td>
-    </tr>
-    <tr>
-      <td><strong>DOM interface</strong></td>
-      <td><p>{{domxref("HTMLInputElement")}}</p></td>
-    </tr>
-    <tr>
-      <td><strong>Methods</strong></td>
-      <td>
-        {{domxref("HTMLInputElement.select", "select()")}},
-        {{domxref("HTMLInputElement.setRangeText", "setRangeText()")}},
-        {{domxref("HTMLInputElement.setSelectionRange", "setSelectionRange()")}}.
-      </td>
-    </tr>
-  </tbody>
-</table>
 
 ## Value
 
@@ -128,7 +80,7 @@ This does _not_ set a limit on how many characters the user can enter into the f
 
 ### spellcheck
 
-`spellcheck` is a global attribute which is used to indicate whether or not to enable spell checking for an element. It can be used on any editable content, but here we consider specifics related to the use of `spellcheck` on {{HTMLElement("input")}} elements. The permitted values for `spellcheck` are:
+`spellcheck` is a global attribute which is used to indicate whether to enable spell checking for an element. It can be used on any editable content, but here we consider specifics related to the use of `spellcheck` on {{HTMLElement("input")}} elements. The permitted values for `spellcheck` are:
 
 - `false`
   - : Disable spell checking for this element.
@@ -147,7 +99,7 @@ The following non-standard attributes are available to search input fields. As a
 
 ### autocorrect
 
-A Safari extension, the `autocorrect` attribute is a string which indicates whether or not to activate automatic correction while the user is editing this field. Permitted values are:
+A Safari extension, the `autocorrect` attribute is a string which indicates whether to activate automatic correction while the user is editing this field. Permitted values are:
 
 - `on`
   - : Enable automatic correction of typos, as well as processing of text substitutions if any are configured.
@@ -183,7 +135,7 @@ The value must be a non-negative decimal number. If not provided, or an invalid 
 ```html
 <form>
   <div>
-    <input type="search" id="mySearch" name="q">
+    <input type="search" id="mySearch" name="q" />
     <button>Search</button>
   </div>
 </form>
@@ -214,8 +166,11 @@ You can provide a useful placeholder inside your search input that could give a 
 ```html
 <form>
   <div>
-    <input type="search" id="mySearch" name="q"
-     placeholder="Search the site…">
+    <input
+      type="search"
+      id="mySearch"
+      name="q"
+      placeholder="Search the site…" />
     <button>Search</button>
   </div>
 </form>
@@ -239,9 +194,12 @@ Let's have a look at an example:
 ```html
 <form role="search">
   <div>
-    <input type="search" id="mySearch" name="q"
-     placeholder="Search the site…"
-     aria-label="Search through site content">
+    <input
+      type="search"
+      id="mySearch"
+      name="q"
+      placeholder="Search the site…"
+      aria-label="Search through site content" />
     <button>Search</button>
   </div>
 </form>
@@ -262,8 +220,12 @@ The physical size of the input box can be controlled using the {{htmlattrxref("s
 ```html
 <form>
   <div>
-    <input type="search" id="mySearch" name="q"
-    placeholder="Search the site…" size="30">
+    <input
+      type="search"
+      id="mySearch"
+      name="q"
+      placeholder="Search the site…"
+      size="30" />
     <button>Search</button>
   </div>
 </form>
@@ -285,15 +247,15 @@ There are useful pseudo-classes available for styling valid/invalid form element
 
 ```css
 input:invalid ~ span::after {
-    content: '✖';
-    padding-left: 5px;
-    position: absolute;
+  content: "✖";
+  padding-left: 5px;
+  position: absolute;
 }
 
 input:valid ~ span::after {
-    content: '✓';
-    padding-left: 5px;
-    position: absolute;
+  content: "✓";
+  padding-left: 5px;
+  position: absolute;
 }
 ```
 
@@ -306,8 +268,12 @@ You can use the {{htmlattrxref("required", "input")}} attribute as an easy way o
 ```html
 <form>
   <div>
-    <input type="search" id="mySearch" name="q"
-    placeholder="Search the site…" required>
+    <input
+      type="search"
+      id="mySearch"
+      name="q"
+      placeholder="Search the site…"
+      required />
     <button>Search</button>
     <span class="validity"></span>
   </div>
@@ -320,15 +286,15 @@ input {
 }
 
 input:invalid ~ span::after {
-    content: '✖';
-    padding-left: 5px;
-    position: absolute;
+  content: "✖";
+  padding-left: 5px;
+  position: absolute;
 }
 
 input:valid ~ span::after {
-    content: '✓';
-    padding-left: 5px;
-    position: absolute;
+  content: "✓";
+  padding-left: 5px;
+  position: absolute;
 }
 ```
 
@@ -352,9 +318,15 @@ The example below requires that the entered value be 4–8 characters in length.
 <form>
   <div>
     <label for="mySearch">Search for user</label>
-    <input type="search" id="mySearch" name="q"
-    placeholder="User IDs are 4–8 characters in length" required
-    size="30" minlength="4" maxlength="8">
+    <input
+      type="search"
+      id="mySearch"
+      name="q"
+      placeholder="User IDs are 4–8 characters in length"
+      required
+      size="30"
+      minlength="4"
+      maxlength="8" />
     <button>Search</button>
     <span class="validity"></span>
   </div>
@@ -367,15 +339,15 @@ input {
 }
 
 input:invalid ~ span::after {
-    content: '✖';
-    padding-left: 5px;
-    position: absolute;
+  content: "✖";
+  padding-left: 5px;
+  position: absolute;
 }
 
 input:valid ~ span::after {
-    content: '✓';
-    padding-left: 5px;
-    position: absolute;
+  content: "✓";
+  padding-left: 5px;
+  position: absolute;
 }
 ```
 
@@ -395,9 +367,14 @@ Let's look at an example. Say we wanted to provide a product ID search form, and
 <form>
   <div>
     <label for="mySearch">Search for product by ID:</label>
-    <input type="search" id="mySearch" name="q"
-    placeholder="two letters followed by four numbers" required
-    size="30" pattern="[A-z]{2}[0-9]{4}">
+    <input
+      type="search"
+      id="mySearch"
+      name="q"
+      placeholder="two letters followed by four numbers"
+      required
+      size="30"
+      pattern="[A-z]{2}[0-9]{4}" />
     <button>Search</button>
     <span class="validity"></span>
   </div>
@@ -410,15 +387,15 @@ input {
 }
 
 input:invalid ~ span::after {
-    content: '✖';
-    padding-left: 5px;
-    position: absolute;
+  content: "✖";
+  padding-left: 5px;
+  position: absolute;
 }
 
 input:valid ~ span::after {
-    content: '✓';
-    padding-left: 5px;
-    position: absolute;
+  content: "✓";
+  padding-left: 5px;
+  position: absolute;
 }
 ```
 
@@ -429,6 +406,56 @@ This renders like so:
 ## Examples
 
 You can see a good example of a search form used in context at our [website-aria-roles](https://github.com/mdn/learning-area/tree/main/accessibility/aria/website-aria-roles) example ([see it live](https://mdn.github.io/learning-area/accessibility/aria/website-aria-roles/)).
+
+## Technical summary
+
+<table class="properties">
+  <tbody>
+    <tr>
+      <td><strong><a href="#value">Value</a></strong></td>
+      <td>
+        A string representing the value contained in
+        the search field.
+      </td>
+    </tr>
+    <tr>
+      <td><strong>Events</strong></td>
+      <td>
+        {{domxref("HTMLElement/change_event", "change")}} and
+        {{domxref("HTMLElement/input_event", "input")}}
+      </td>
+    </tr>
+    <tr>
+      <td><strong>Supported Common Attributes</strong></td>
+      <td>
+        {{htmlattrxref("autocomplete", "input")}},
+        {{htmlattrxref("list", "input")}},
+        {{htmlattrxref("maxlength", "input")}},
+        {{htmlattrxref("minlength", "input")}},
+        {{htmlattrxref("pattern", "input")}},
+        {{htmlattrxref("placeholder", "input")}},
+        {{htmlattrxref("required", "input")}},
+        {{htmlattrxref("size", "input")}}.
+      </td>
+    </tr>
+    <tr>
+      <td><strong>IDL attributes</strong></td>
+      <td><code>value</code></td>
+    </tr>
+    <tr>
+      <td><strong>DOM interface</strong></td>
+      <td><p>{{domxref("HTMLInputElement")}}</p></td>
+    </tr>
+    <tr>
+      <td><strong>Methods</strong></td>
+      <td>
+        {{domxref("HTMLInputElement.select", "select()")}},
+        {{domxref("HTMLInputElement.setRangeText", "setRangeText()")}},
+        {{domxref("HTMLInputElement.setSelectionRange", "setSelectionRange()")}}.
+      </td>
+    </tr>
+  </tbody>
+</table>
 
 ## Specifications
 

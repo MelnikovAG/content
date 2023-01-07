@@ -18,6 +18,7 @@ browser-compat:
   - api.Document.fullscreen
   - api.Document.fullscreenEnabled
 ---
+
 {{DefaultAPISidebar("Fullscreen API")}}
 
 This article demonstrates how to use the [Fullscreen API](/en-US/docs/Web/API/Fullscreen_API) to place a given element into fullscreen mode, as well as how to detect when the browser enters or exits fullscreen mode.
@@ -120,7 +121,7 @@ function toggleFullScreen() {
 }
 ```
 
-This starts by looking at the value of the `fullscreenElement` attribute on the {{DOMxRef("document")}} (checking it prefixed with both `moz`, `ms`, or `webkit`). If it's `null`, the document is currently in windowed mode, so we need to switch to fullscreen mode. Switching to fullscreen mode is done by calling {{DOMxRef("element.requestFullscreen()")}}.
+This starts by looking at the value of the `fullscreenElement` attribute on the {{DOMxRef("document")}}. If it's `null`, the document is currently in windowed mode, so we need to switch to fullscreen mode. Switching to fullscreen mode is done by calling {{DOMxRef("element.requestFullscreen()")}}.
 
 If fullscreen mode is already active (`fullscreenElement` is non-`null`), we call {{DOMxRef("document.exitFullscreen()")}}.
 

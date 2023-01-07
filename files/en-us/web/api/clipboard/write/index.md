@@ -17,6 +17,7 @@ tags:
   - write
 browser-compat: api.Clipboard.write
 ---
+
 {{APIRef("Clipboard API")}}
 
 The {{domxref("Clipboard")}} method
@@ -31,9 +32,11 @@ automatically to pages when they are in the active tab.
 > {{SectionOnPage("/en-US/docs/Web/API/Clipboard", "Clipboard availability")}} for more
 > information.
 
+> **Note:** For parity with Google Chrome, Firefox only allows this function to work with text, HTML, and PNG data.
+
 ## Syntax
 
-```js
+```js-nolint
 write(data)
 ```
 

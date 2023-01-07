@@ -1,6 +1,7 @@
 ---
 title: 'TypeError: setting getter-only property "x"'
 slug: Web/JavaScript/Reference/Errors/Getter_only
+page-type: javascript-error
 tags:
   - Error
   - Errors
@@ -8,6 +9,7 @@ tags:
   - Strict Mode
   - TypeError
 ---
+
 {{jsSidebar("Errors")}}
 
 The JavaScript [strict mode](/en-US/docs/Web/JavaScript/Reference/Strict_mode)-only exception "setting getter-only property" occurs when there is an attempt

@@ -1,13 +1,15 @@
 ---
 title: Introduction
 slug: Web/JavaScript/Guide/Introduction
+page-type: guide
 tags:
   - Beginner
   - Guide
   - Introduction
   - JavaScript
-  - l10n:priority
+  - "l10n:priority"
 ---
+
 {{jsSidebar("JavaScript Guide")}} {{PreviousNext("Web/JavaScript/Guide", "Web/JavaScript/Guide/Grammar_and_types")}}
 
 This chapter introduces JavaScript and discusses some of its fundamental concepts.
@@ -39,7 +41,7 @@ JavaScript contains a standard library of objects, such as `Array`, `Date`, and 
 - _Client-side JavaScript_ extends the core language by supplying objects to control a browser and its _Document Object Model_ (DOM). For example, client-side extensions allow an application to place elements on an HTML form and respond to user events such as mouse clicks, form input, and page navigation.
 - _Server-side JavaScript_ extends the core language by supplying objects relevant to running JavaScript on a server. For example, server-side extensions allow an application to communicate with a database, provide continuity of information from one invocation to another of the application, or perform file manipulations on a server.
 
-This means that in the browser, JavaScript can change the way the webpage (DOM) looks. And, likewise, Node.js JavaScript on the server can respond to custom requests from code written in the browser.
+This means that in the browser, JavaScript can change the way the webpage (DOM) looks. And, likewise, Node.js JavaScript on the server can respond to custom requests sent by code executed in the browser.
 
 ## JavaScript and Java
 
@@ -125,6 +127,6 @@ In the following pages, this guide introduces you to the JavaScript syntax and l
 But for now, remember to always include the `(function(){"use strict";` before your code, and add `})();` to the end of your code. The [strict mode](/en-US/docs/Web/JavaScript/Reference/Strict_mode) and [IIFE](/en-US/docs/Glossary/IIFE) articles explain what those do, but for now they can be thought of as doing the following:
 
 1. Prevent semantics in JavaScript that trip up beginners.
-2. Prevent code snippets executed in the console from interacting with one-another (e.g., having something created in one console execution being used for a different console execution).
+2. Prevent code snippets executed in the console from interacting with one another (e.g., having something created in one console execution being used for a different console execution).
 
 {{PreviousNext("Web/JavaScript/Guide", "Web/JavaScript/Guide/Grammar_and_types")}}

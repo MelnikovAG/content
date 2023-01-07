@@ -59,7 +59,5 @@ For a list of web game examples, see our [examples page](/en-US/docs/Games/Examp
   - : JavaScript coding competition for HTML game developers with the file size limit set to 13 kilobytes. All the submitted games are available in a readable form on GitHub.
 - [Mozilla Hacks Blog](https://hacks.mozilla.org/category/games/)
   - : Games category on the Mozilla Hacks blog containing interesting gamedev related articles.
-
-## See also
-
 - [Games section on wiki.mozilla.org](https://wiki.mozilla.org/Platform/Games)
+  - : A wiki page with information about Mozilla's involvement in platform games.

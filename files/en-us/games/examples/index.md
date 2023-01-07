@@ -20,10 +20,6 @@ This page lists a number of impressive web technology demos for you to get inspi
   - : A neat vertically scrolling space shooter.
 - [Swooop](https://playcanv.as/p/JtL2iqIH)
   - : A plane flying game: control your plane and collect the jewels. Again, created with [PlayCanvas](https://playcanvas.com/).
-- [Save the Day](https://ga.me/games/save-the-day)
-  - : Fly your rescue chopper around the disaster area and save the stranded victims (ga.me.)
-- [Polycraft](https://ga.me/games/polycraft)
-  - : A shipwreck 'n survive game. Explore the island and defeat the monsters.
 - [HexGL](https://hexgl.bkcore.com/)
   - : A fast-paced, futuristic racing game.
 - [Angry Bots](https://beta.unity3d.com/jonas/AngryBots/)
@@ -33,9 +29,9 @@ This page lists a number of impressive web technology demos for you to get inspi
 - [X-Type](https://phoboslab.org/xtype/)
   - : Vertically scrolling space shooter demo.
 - [Xibalba](https://phoboslab.org/xibalba/)
-  - : Retro (Doom-style) first person shooter.
+  - : Retro (Doom-style) first-person shooter.
 - [Gorescript](https://timeinvariant.github.io/gorescript/play/)
-  - : Another retro style first person shooter.
+  - : Another retro style first-person shooter.
 - [The Wizard](https://hypnoticowl.com/games/the-wizard/)
   - : A turn-based, dungeon puzzle game.
 - [Hextris](https://hextris.io/)

@@ -1,6 +1,7 @@
 ---
 title: var()
 slug: Web/CSS/var
+page-type: css-function
 tags:
   - CSS
   - CSS Custom Properties
@@ -13,6 +14,7 @@ tags:
   - var()
 browser-compat: css.properties.custom-property.var
 ---
+
 {{CSSRef}}
 
 The **`var()`** [CSS](/en-US/docs/Web/CSS) [function](/en-US/docs/Web/CSS/CSS_Functions) can be used to insert the value of a [custom property](/en-US/docs/Web/CSS/--*) (sometimes called a "CSS variable") instead of any part of a value of another property.
@@ -36,6 +38,8 @@ The first argument to the function is the name of the custom property to be subs
 - `<declaration-value>`
   - : The custom property's fallback value, which is used in case the custom property is invalid in the used context. This value may contain any character except some characters with special meaning like newlines, unmatched closing brackets, i.e. `)`, `]`, or `}`, top-level semicolons, or exclamation marks. The fallback value can itself be a custom property using the `var()` syntax.
 
+    > **Note:** `var(--a,)` is valid, specifying that if the `--a` custom property is invalid or missing, the `var()` should be replaced with nothing.
+
 ## Examples
 
 ### Using a custom property set on :root
@@ -56,7 +60,11 @@ body {
 /* Fallback */
 /* In the component's style: */
 .component .header {
-  color: var(--header-color, blue); /* header-color isn't set, and so remains blue, the fallback value */
+  /* header-color isn't set, and so remains blue, the fallback value */
+  color: var(
+    --header-color,
+    blue
+  );
 }
 
 .component .text {

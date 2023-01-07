@@ -1,13 +1,13 @@
 ---
 title: WebP
-slug: Glossary/webp
+slug: Glossary/WebP
 tags:
   - Beginner
   - Composing
-  - Glossary
   - Infrastructure
   - WebP
 ---
+
 **WebP** is a lossless and lossy compression image format developed by Google.
 
 ## See also

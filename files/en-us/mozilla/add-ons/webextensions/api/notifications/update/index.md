@@ -13,6 +13,7 @@ tags:
   - WebExtensions
 browser-compat: webextensions.api.notifications.update
 ---
+
 {{AddonSidebar()}}
 
 Updates a notification, given its ID.
@@ -21,7 +22,7 @@ This is an asynchronous function that returns a [`Promise`](/en-US/docs/Web/Java
 
 ## Syntax
 
-```js
+```js-nolint
 let updating = browser.notifications.update(
   id,                            // string
   options                        // NotificationOptions
@@ -100,5 +101,3 @@ browser.browserAction.onClicked.addListener(() => {
 {{WebExtExamples}}
 
 > **Note:** This API is based on Chromium's [`chrome.notifications`](https://developer.chrome.com/docs/extensions/reference/notifications/) API.
->
-> Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.

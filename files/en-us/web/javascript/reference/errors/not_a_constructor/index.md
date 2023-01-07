@@ -1,12 +1,14 @@
 ---
 title: 'TypeError: "x" is not a constructor'
 slug: Web/JavaScript/Reference/Errors/Not_a_constructor
+page-type: javascript-error
 tags:
   - Error
   - Errors
   - JavaScript
   - TypeError
 ---
+
 {{jsSidebar("Errors")}}
 
 The JavaScript exception "is not a constructor" occurs when there was an attempt to use

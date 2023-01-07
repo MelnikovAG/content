@@ -10,13 +10,14 @@ tags:
   - Experimental
 browser-compat: api.NDEFMessage.NDEFMessage
 ---
-{{SecureContext_Header}}{{APIRef}}{{SeeCompatTable}}
+
+{{SecureContext_Header}}{{APIRef("Web NFC API")}}{{SeeCompatTable}}
 
 The **`NDEFMessage()`** constructor creates a new {{domxref("NDEFMessage")}} object, initialized with the given NDEF records.
 
 ## Syntax
 
-```js
+```js-nolint
 new NDEFMessage(records)
 ```
 

@@ -1,6 +1,7 @@
 ---
 title: Object.prototype.hasOwnProperty()
 slug: Web/JavaScript/Reference/Global_Objects/Object/hasOwnProperty
+page-type: javascript-instance-method
 tags:
   - JavaScript
   - Method
@@ -9,6 +10,7 @@ tags:
   - hasOwnProperty
 browser-compat: javascript.builtins.Object.hasOwnProperty
 ---
+
 {{JSRef}}
 
 The **`hasOwnProperty()`** method returns a boolean indicating whether the
@@ -22,7 +24,7 @@ it).
 
 ## Syntax
 
-```js
+```js-nolint
 hasOwnProperty(prop)
 ```
 

@@ -12,6 +12,7 @@ tags:
   - Polyfill
 browser-compat: api.NodeList.forEach
 ---
+
 {{APIRef("DOM")}}
 
 The **`forEach()`** method of the {{domxref("NodeList")}}
@@ -20,9 +21,9 @@ insertion order.
 
 ## Syntax
 
-```js
-someNodeList.forEach(callback);
-someNodeList.forEach(callback, thisArg);
+```js-nolint
+forEach(callback)
+forEach(callback, thisArg)
 ```
 
 ### Parameters
@@ -74,7 +75,7 @@ list.forEach(
 
 The above code results in the following:
 
-```
+```plain
 [object HTMLParagraphElement], 0, myThisArg
 [object Text], 1, myThisArg
 [object HTMLSpanElement], 2, myThisArg

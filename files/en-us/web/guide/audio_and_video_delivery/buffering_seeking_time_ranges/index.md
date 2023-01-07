@@ -10,6 +10,9 @@ tags:
   - buffering
   - seeking
 ---
+
+{{QuickLinksWithSubPages("/en-US/docs/Web/Guide/Audio_and_video_delivery")}}
+
 Sometimes it's useful to know how much {{htmlelement("audio") }} or {{htmlelement("video") }} has downloaded or is playable without delay — a good example of this is the buffered progress bar of an audio or video player. This article discusses how to build a buffer/seek bar using [TimeRanges](/en-US/docs/Web/API/TimeRanges), and other features of the media API.
 
 ## Buffered
@@ -19,8 +22,7 @@ The `buffered` attribute will tell us which parts of the media has been download
 This will work with {{htmlelement("audio") }} or {{htmlelement("video") }}; for now let's consider a simple audio example:
 
 ```html
-<audio id="my-audio" controls src="music.mp3">
-</audio>
+<audio id="my-audio" controls src="music.mp3"></audio>
 ```
 
 We can access these attributes like so:
@@ -42,7 +44,7 @@ A {{ domxref("TimeRanges") }} Object consists of the following properties:
 
 Without any user interaction there is usually only one time range, but if you jump about in the media more than one time range can appear, as illustrated by the below visualization. This represents two buffered time ranges — one spanning 0 to 5 seconds and the second spanning 15 to 19 seconds.
 
-```
+```plain
 ------------------------------------------------------
 |=============|                    |===========|     |
 ------------------------------------------------------
@@ -59,21 +61,20 @@ audio.buffered.start(1); // returns 15
 audio.buffered.end(1);   // returns 19
 ```
 
-To try out and visualize buffered time ranges we can write a little bit of HTML:
+To try out and visualize buffered time ranges we can write a bit of HTML:
 
 ```html
 <p>
   <audio id="my-audio" controls>
-    <source src="music.mp3" type="audio/mpeg">
+    <source src="music.mp3" type="audio/mpeg" />
   </audio>
 </p>
 <p>
-  <canvas id="my-canvas" width="300" height="20">
-  </canvas>
+  <canvas id="my-canvas" width="300" height="20"> </canvas>
 </p>
 ```
 
-and a little bit of JavaScript:
+and a bit of JavaScript:
 
 ```js
 window.onload = () => {
@@ -134,7 +135,7 @@ So let's build this. The HTML for our player looks like this:
 
 ```html
 <audio id="my-audio" preload controls>
-  <source src="music.mp3" type="audio/mpeg">
+  <source src="music.mp3" type="audio/mpeg" />
 </audio>
 <div class="buffered">
   <span id="buffered-amount"></span>

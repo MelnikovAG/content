@@ -10,6 +10,7 @@ tags:
   - Reference
 browser-compat: api.Document
 ---
+
 {{APIRef("DOM")}}
 
 The **`Document`** interface represents any web page loaded in the browser and serves as an entry point into the web page's content, which is the [DOM tree](/en-US/docs/Web/API/Document_object_model/Using_the_W3C_DOM_Level_1_Core).
@@ -25,7 +26,7 @@ The `Document` interface describes the common properties and methods for any kin
 - {{DOMxRef("Document.Document", "Document()")}}
   - : Creates a new `Document` object.
 
-## Properties
+## Instance properties
 
 _This interface also inherits from the {{DOMxRef("Node")}} and {{DOMxRef("EventTarget")}} interfaces._
 
@@ -62,6 +63,8 @@ _This interface also inherits from the {{DOMxRef("Node")}} and {{DOMxRef("EventT
   - : Returns the {{DOMxRef("FontFaceSet")}} interface of the current document.
 - {{DOMxRef("Document.forms")}} {{ReadOnlyInline}}
   - : Returns an {{DOMxRef("HTMLCollection")}} of the {{HTMLElement("form")}} elements in the document.
+- {{DOMxRef("Document.fragmentDirective")}} {{ReadOnlyInline}} {{Experimental_Inline}}
+  - : Returns the {{domxref("FragmentDirective")}} for the current document.
 - {{DOMxRef("Document.fullscreenElement")}} {{ReadOnlyInline}}
   - : The element that's currently in full screen mode for this document.
 - {{DOMxRef("Document.head")}} {{ReadOnlyInline}}
@@ -76,8 +79,6 @@ _This interface also inherits from the {{DOMxRef("Node")}} and {{DOMxRef("EventT
   - : Returns the last child element of the current document.
 - {{DOMxRef("Document.links")}} {{ReadOnlyInline}}
   - : Returns an {{DOMxRef("HTMLCollection")}} of the hyperlinks in the document.
-- {{DOMxRef("Document.mozSyntheticDocument")}} {{Non-standard_Inline}}
-  - : Returns `true` only if this document is synthetic, such as a standalone image, video, audio file, or the like.
 - {{DOMxRef("Document.pictureInPictureElement")}} {{ReadOnlyInline}}
   - : Returns the {{DOMxRef('Element')}} currently being presented in picture-in-picture mode in this document.
 - {{DOMxRef("Document.pictureInPictureEnabled")}} {{ReadOnlyInline}}
@@ -113,6 +114,8 @@ _The `Document` interface for HTML documents inherits from the {{DOMxRef("HTMLDo
   - : Gets/sets directionality (rtl/ltr) of the document.
 - {{DOMxRef("Document.domain")}} {{Deprecated_Inline}}
   - : Gets/sets the domain of the current document.
+- {{DOMxRef("Document.fullscreenEnabled")}} {{ReadOnlyInline}}
+  - : Indicates whether fullscreen mode is available.
 - {{DOMxRef("Document.lastModified")}} {{ReadOnlyInline}}
   - : Returns the date on which the document was last modified.
 - {{DOMxRef("Document.location")}} {{ReadOnlyInline}}
@@ -171,7 +174,7 @@ _The `Document` interface for HTML documents inherits from the {{DOMxRef("HTMLDo
 - {{DOMxRef("Document.xmlVersion")}} {{Deprecated_Inline}}
   - : Returns the version number as specified in the XML declaration or `"1.0"` if the declaration is absent.
 
-## Methods
+## Instance methods
 
 _This interface also inherits from the {{DOMxRef("Node")}} and {{DOMxRef("EventTarget")}} interfaces._
 
@@ -223,6 +226,8 @@ _This interface also inherits from the {{DOMxRef("Node")}} and {{DOMxRef("EventT
   - : Returns an array of all elements at the specified coordinates.
 - {{DOMxRef("Document.enableStyleSheetsForSet()")}} {{Deprecated_Inline}} {{Non-standard_Inline}}
   - : Enables the style sheets for the specified style sheet set.
+- {{DOMxRef("Document.exitFullscreen()")}}
+  - : Stops document's fullscreen element from being displayed fullscreen.
 - {{DOMxRef("Document.exitPictureInPicture()")}}
   - : Remove the video from the floating picture-in-picture window back to its original container.
 - {{DOMxRef("Document.exitPointerLock()")}}
@@ -245,8 +250,6 @@ _This interface also inherits from the {{DOMxRef("Node")}} and {{DOMxRef("EventT
   - : Returns a {{jsxref("Promise")}} that resolves with a boolean value indicating whether the document has access to its first-party storage.
 - {{DOMxRef("Document.importNode()")}}
   - : Returns a clone of a node from an external document.
-- {{DOMxRef("Document.normalizeDocument()")}} {{Deprecated_Inline}}
-  - : Replaces entities, normalizes text nodes, etc.
 - {{DOMxRef("Document.prepend()")}}
   - : Inserts a set of {{domxref("Node")}} objects or string objects before the first child of the document.
 - {{DOMxRef("Document.querySelector()")}}
@@ -278,7 +281,7 @@ The `Document` interface is extended with the {{DOMxRef("XPathEvaluator")}} inte
 The `Document` interface for HTML documents inherit from the {{DOMxRef("HTMLDocument")}} interface or is extended for such documents:
 
 - {{DOMxRef("Document.clear()")}} {{Deprecated_Inline}}
-  - : In majority of modern browsers, including recent versions of Firefox and Internet Explorer, this method does nothing.
+  - : This method does nothing.
 - {{DOMxRef("Document.close()")}}
   - : Closes a document stream for writing.
 - {{DOMxRef("Document.execCommand()")}} {{Deprecated_Inline}}
@@ -312,6 +315,8 @@ Listen to these events using `addEventListener()` or by assigning an event liste
   - : Fired when a static {{HTMLElement("script")}} element finishes executing its script
 - {{DOMxRef("Document.beforescriptexecute_event", "beforescriptexecute")}} {{Non-standard_Inline}}
   - : Fired when a static {{HTMLElement("script")}} is about to start executing.
+- {{DOMxRef("Document.securitypolicyviolation_event", "securitypolicyviolation")}}
+  - : Fired when a content security policy is violated.
 - {{DOMxRef("Document/scroll_event", "scroll")}}
   - : Fired when the document view or an element has been scrolled.
 - {{DOMxRef("Document/visibilitychange_event", "visibilitychange")}}

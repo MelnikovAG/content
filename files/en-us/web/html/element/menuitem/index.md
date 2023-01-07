@@ -18,51 +18,11 @@ tags:
 browser-compat: html.elements.menuitem
 ---
 
-{{HTMLRef}}{{Deprecated_Header}}{{Non-standard_header}}
+{{HTMLSidebar}}{{Deprecated_Header}}{{Non-standard_header}}
 
 The **`<menuitem>`** [HTML](/en-US/docs/Web/HTML) element represents a command that a user is able to invoke through a popup menu. This includes context menus, as well as menus that might be attached to a menu button.
 
 A command can either be defined explicitly, with a textual label and optional icon to describe its appearance, or alternatively as an _indirect command_ whose behavior is defined by a separate element. Commands can also optionally include a checkbox or be grouped to share radio buttons. (Menu items for indirect commands gain checkboxes or radio buttons when defined against elements `<input type="checkbox">` and `<input type="radio">`.)
-
-<table class="properties">
-  <tbody>
-    <tr>
-      <th scope="row">
-        <a href="/en-US/docs/Web/Guide/HTML/Content_categories"
-          >Content categories</a
-        >
-      </th>
-      <td>None.</td>
-    </tr>
-    <tr>
-      <th scope="row">Permitted content</th>
-      <td>None, it is an {{Glossary("empty element")}}.</td>
-    </tr>
-    <tr>
-      <th scope="row">Tag omission</th>
-      <td>Must have a start tag and must not have an end tag.</td>
-    </tr>
-    <tr>
-      <th scope="row">Permitted parents</th>
-      <td>
-        The {{HTMLElement("menu")}} element, where that element is in
-        the <em>popup menu</em> state. (If specified, the
-        <code>type</code> attribute of the {{HTMLElement("menu")}}
-        element must be <code>popup</code>; if missing, the parent element of
-        the {{HTMLElement("menu")}} must itself be a
-        {{HTMLElement("menu")}} in the <em>popup menu</em> state.)
-      </td>
-    </tr>
-    <tr>
-      <th scope="row">Permitted ARIA roles</th>
-      <td>None</td>
-    </tr>
-    <tr>
-      <th scope="row">DOM interface</th>
-      <td>{{DOMxRef("HTMLMenuItemElement")}}</td>
-    </tr>
-  </tbody>
-</table>
 
 ## Attributes
 
@@ -96,20 +56,24 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attrib
 
 ```html
 <!-- A <div> element with a context menu -->
-<div contextmenu="popup-menu">
-  Right-click to see the adjusted context menu
-</div>
+<div contextmenu="popup-menu">Right-click to see the adjusted context menu</div>
 
 <menu type="context" id="popup-menu">
   <menuitem type="checkbox" checked>Checkbox</menuitem>
-  <hr>
-  <menuitem type="command" label="This command does nothing" icon="favicon-192x192.png">
+  <hr />
+  <menuitem
+    type="command"
+    label="This command does nothing"
+    icon="favicon-192x192.png">
     Commands don't render their contents.
   </menuitem>
-  <menuitem type="command" label="This command has javascript" onclick="alert('command clicked')">
+  <menuitem
+    type="command"
+    label="This command has javascript"
+    onclick="alert('command clicked')">
     Commands don't render their contents.
   </menuitem>
-  <hr>
+  <hr />
   <menuitem type="radio" radiogroup="group1">Radio Button 1</menuitem>
   <menuitem type="radio" radiogroup="group1">Radio Button 2</menuitem>
 </menu>
@@ -128,6 +92,48 @@ div {
 ### Result
 
 {{EmbedLiveSample("Example", '100%', 80)}}
+
+## Technical Summary
+
+<table class="properties">
+  <tbody>
+    <tr>
+      <th scope="row">
+        <a href="/en-US/docs/Web/Guide/HTML/Content_categories"
+          >Content categories</a
+        >
+      </th>
+      <td>None.</td>
+    </tr>
+    <tr>
+      <th scope="row">Permitted content</th>
+      <td>None; it is a {{Glossary("void element")}}.</td>
+    </tr>
+    <tr>
+      <th scope="row">Tag omission</th>
+      <td>Must have a start tag and must not have an end tag.</td>
+    </tr>
+    <tr>
+      <th scope="row">Permitted parents</th>
+      <td>
+        The {{HTMLElement("menu")}} element, where that element is in
+        the <em>popup menu</em> state. (If specified, the
+        <code>type</code> attribute of the {{HTMLElement("menu")}}
+        element must be <code>popup</code>; if missing, the parent element of
+        the {{HTMLElement("menu")}} must itself be a
+        {{HTMLElement("menu")}} in the <em>popup menu</em> state.)
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">Permitted ARIA roles</th>
+      <td>None</td>
+    </tr>
+    <tr>
+      <th scope="row">DOM interface</th>
+      <td>{{DOMxRef("HTMLMenuItemElement")}}</td>
+    </tr>
+  </tbody>
+</table>
 
 ## Specifications
 

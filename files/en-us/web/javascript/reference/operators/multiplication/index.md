@@ -1,6 +1,7 @@
 ---
 title: Multiplication (*)
 slug: Web/JavaScript/Reference/Operators/Multiplication
+page-type: javascript-operator
 tags:
   - JavaScript
   - Language feature
@@ -8,15 +9,16 @@ tags:
   - Reference
 browser-compat: javascript.operators.multiplication
 ---
+
 {{jsSidebar("Operators")}}
 
-The multiplication operator (`*`) produces the product of the operands.
+The **multiplication (`*`)** operator produces the product of the operands.
 
 {{EmbedInteractiveExample("pages/js/expressions-multiplication.html")}}
 
 ## Syntax
 
-```js
+```js-nolint
 x * y
 ```
 

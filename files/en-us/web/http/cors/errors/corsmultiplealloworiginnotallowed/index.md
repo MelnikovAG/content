@@ -14,11 +14,12 @@ tags:
   - console
   - troubleshooting
 ---
+
 {{HTTPSidebar}}
 
 ## Reason
 
-```
+```plain
 Reason: Multiple CORS header 'Access-Control-Allow-Origin' not allowed
 ```
 

@@ -2,6 +2,7 @@
 title: Comparing Reflect and Object methods
 slug: >-
   Web/JavaScript/Reference/Global_Objects/Reflect/Comparing_Reflect_and_Object_methods
+page-type: guide
 tags:
   - Guide
   - JavaScript
@@ -10,6 +11,7 @@ tags:
   - Overview
   - Reflect
 ---
+
 {{jssidebar}}
 
 The {{jsxref("Reflect")}} object is a built-in object that provides methods to interface with JavaScript objects. Some of the static functions that exist on `Reflect` also correspond to methods available on {{jsxref("Object")}}. Although some of the methods appear to be similar in their behavior, there are often subtle differences between them.

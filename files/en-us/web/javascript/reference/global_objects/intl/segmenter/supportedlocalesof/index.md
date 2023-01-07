@@ -1,6 +1,7 @@
 ---
 title: Intl.Segmenter.supportedLocalesOf()
 slug: Web/JavaScript/Reference/Global_Objects/Intl/Segmenter/supportedLocalesOf
+page-type: javascript-static-method
 tags:
   - Internationalization
   - Intl
@@ -9,30 +10,30 @@ tags:
   - Reference
 browser-compat: javascript.builtins.Intl.Segmenter.supportedLocalesOf
 ---
+
 {{JSRef}}
 
-The **`Intl.Segmenter.supportedLocalesOf()`** method returns an array containing those of the provided locales that are supported without having to fall back to the runtime's default locale.
+The **`Intl.Segmenter.supportedLocalesOf()`** static method returns an array containing those of the provided locales that are supported without having to fall back to the runtime's default locale.
 
 {{EmbedInteractiveExample("pages/js/intl-segmenter-supportedlocalesof.html", "shorter")}}
 
 ## Syntax
 
-```js
-supportedLocalesOf(locales)
-supportedLocalesOf(locales, options)
+```js-nolint
+Intl.Segmenter.supportedLocalesOf(locales)
+Intl.Segmenter.supportedLocalesOf(locales, options)
 ```
 
 ### Parameters
 
 - `locales`
-  - : A string with a BCP 47 language tag, or an array of such strings. For the general
-    form of the `locales` argument, see the [`Intl`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl#locale_identification_and_negotiation) page.
+  - : A string with a BCP 47 language tag, or an array of such strings. For the general form and interpretation of the `locales` argument, see [Locale identification and negotiation](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl#locale_identification_and_negotiation).
 - `options` {{optional_inline}}
   - : An object that may have the following property:
     - `localeMatcher`
       - : The locale matching algorithm to use. Possible values are
         `"lookup"` and `"best fit"`; the default is
-        `"best fit"`. For information about this option, see the [`Intl`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl#locale_negotiation) page.
+        `"best fit"`. For information about this option, see the [`Intl`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl#locale_identification_and_negotiation) page.
 
 ### Return value
 
@@ -56,7 +57,7 @@ and therefore return the Balinese language tag as well.
 const locales = ['ban', 'id-u-co-pinyin', 'de-ID'];
 const options = { localeMatcher: 'lookup' };
 console.log(Intl.Segmenter.supportedLocalesOf(locales, options).join(', '));
-// → "id-u-co-pinyin, de-ID"
+// "id-u-co-pinyin, de-ID"
 ```
 
 ## Specifications

@@ -1,6 +1,7 @@
 ---
 title: Left shift (<<)
 slug: Web/JavaScript/Reference/Operators/Left_shift
+page-type: javascript-operator
 tags:
   - Bitwise operator
   - JavaScript
@@ -9,15 +10,16 @@ tags:
   - Reference
 browser-compat: javascript.operators.left_shift
 ---
+
 {{jsSidebar("Operators")}}
 
-The **left shift operator (`<<`)** shifts the first operand the specified number of bits, modulo 32, to the left. Excess bits shifted off to the left are discarded. Zero bits are shifted in from the right.
+The **left shift (`<<`)** operator shifts the first operand the specified number of bits, modulo 32, to the left. Excess bits shifted off to the left are discarded. Zero bits are shifted in from the right.
 
 {{EmbedInteractiveExample("pages/js/expressions-left-shift.html", "shorter")}}
 
 ## Syntax
 
-```js
+```js-nolint
 a << b
 ```
 

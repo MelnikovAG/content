@@ -1,6 +1,7 @@
 ---
 title: Symbol.prototype.description
 slug: Web/JavaScript/Reference/Global_Objects/Symbol/description
+page-type: javascript-instance-accessor-property
 tags:
   - JavaScript
   - Property
@@ -9,6 +10,7 @@ tags:
   - Polyfill
 browser-compat: javascript.builtins.Symbol.description
 ---
+
 {{JSRef}}
 
 The read-only **`description`** property is a string returning the optional description of {{JSxRef("Symbol")}} objects.
@@ -24,18 +26,18 @@ The read-only **`description`** property is a string returning the optional desc
 ### Using description
 
 ```js
-Symbol('desc').toString();   // "Symbol(desc)"
-Symbol('desc').description;  // "desc"
-Symbol('').description;      // ""
-Symbol().description;        // undefined
+Symbol("desc").toString(); // "Symbol(desc)"
+Symbol("desc").description; // "desc"
+Symbol("").description; // ""
+Symbol().description; // undefined
 
 // well-known symbols
-Symbol.iterator.toString();  // "Symbol(Symbol.iterator)"
+Symbol.iterator.toString(); // "Symbol(Symbol.iterator)"
 Symbol.iterator.description; // "Symbol.iterator"
 
 // global symbols
-Symbol.for('foo').toString();  // "Symbol(foo)"
-Symbol.for('foo').description; // "foo"
+Symbol.for("foo").toString(); // "Symbol(foo)"
+Symbol.for("foo").description; // "foo"
 ```
 
 ## Specifications

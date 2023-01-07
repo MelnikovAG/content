@@ -9,13 +9,14 @@ tags:
   - Reference
 browser-compat: api.HTMLObjectElement
 ---
+
 {{ APIRef("HTML DOM") }}
 
 The **`HTMLObjectElement`** interface provides special properties and methods (beyond those on the {{domxref("HTMLElement")}} interface it also has available to it by inheritance) for manipulating the layout and presentation of {{HTMLElement("object")}} element, representing external resources.
 
 {{InheritanceDiagram}}
 
-## Properties
+## Instance properties
 
 _Inherits properties from its parent, {{domxref("HTMLElement")}}._
 
@@ -34,7 +35,7 @@ _Inherits properties from its parent, {{domxref("HTMLElement")}}._
 - {{domxref("HTMLObjectElement.contentDocument")}} {{ReadOnlyInline}}
   - : Returns a {{domxref("Document")}} representing the active document of the object element's nested browsing context, if any; otherwise `null`.
 - {{domxref("HTMLObjectElement.contentWindow")}} {{ReadOnlyInline}}
-  - : Returns a {{domxref("WindowProxy")}} representing the window proxy of the object element's nested browsing context, if any; otherwise `null`.
+  - : Returns a {{glossary("WindowProxy")}} representing the window proxy of the object element's nested browsing context, if any; otherwise `null`.
 - {{domxref("HTMLObjectElement.data")}}
   - : Returns a string that reflects the {{htmlattrxref("data", "object")}} HTML attribute, specifying the address of a resource's data.
 - {{domxref("HTMLObjectElement.declare")}} {{deprecated_inline}}
@@ -64,7 +65,7 @@ _Inherits properties from its parent, {{domxref("HTMLElement")}}._
 - {{domxref("HTMLObjectElement.willValidate")}} {{ReadOnlyInline}}
   - : Returns a boolean value that indicates whether the element is a candidate for constraint validation. Always `false` for `HTMLObjectElement` objects.
 
-## Methods
+## Instance methods
 
 _Inherits methods from its parent, {{domxref("HTMLElement")}}._
 

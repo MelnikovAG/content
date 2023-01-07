@@ -1,6 +1,7 @@
 ---
 title: handler.setPrototypeOf()
 slug: Web/JavaScript/Reference/Global_Objects/Proxy/Proxy/setPrototypeOf
+page-type: javascript-instance-method
 tags:
   - ECMAScript 2015
   - JavaScript
@@ -9,6 +10,7 @@ tags:
   - Proxy
 browser-compat: javascript.builtins.Proxy.handler.setPrototypeOf
 ---
+
 {{JSRef}}
 
 The **`handler.setPrototypeOf()`** method is a trap for
@@ -18,7 +20,7 @@ The **`handler.setPrototypeOf()`** method is a trap for
 
 ## Syntax
 
-```js
+```js-nolint
 new Proxy(target, {
   setPrototypeOf(target, prototype) {
   }
@@ -52,10 +54,11 @@ This trap can intercept these operations:
 - {{jsxref("Object.setPrototypeOf()")}}
 - {{jsxref("Reflect.setPrototypeOf()")}}
 
+Or any other operation that invokes the `[[SetPrototypeOf]]` [internal method](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Proxy#object_internal_methods).
+
 ### Invariants
 
-If the following invariants are violated, the proxy will throw a
-{{jsxref("TypeError")}}:
+If the following invariants are violated, the trap throws a {{jsxref("TypeError")}} when invoked.
 
 - If `target` is not extensible, the `prototype`
   parameter must be the same value as
@@ -84,7 +87,8 @@ const handlerReturnsFalse = {
   },
 };
 
-const newProto = {}, target = {};
+const newProto = {},
+  target = {};
 
 const p1 = new Proxy(target, handlerReturnsFalse);
 Object.setPrototypeOf(p1, newProto); // throws a TypeError
@@ -100,14 +104,15 @@ failure, or you want to throw a custom exception value.
 ```js
 const handlerThrows = {
   setPrototypeOf(target, newProto) {
-    throw new Error('custom error');
+    throw new Error("custom error");
   },
 };
 
-const newProto = {}, target = {};
+const newProto = {},
+  target = {};
 
 const p2 = new Proxy(target, handlerThrows);
-Object.setPrototypeOf(p2, newProto);  // throws new Error("custom error")
+Object.setPrototypeOf(p2, newProto); // throws new Error("custom error")
 Reflect.setPrototypeOf(p2, newProto); // throws new Error("custom error")
 ```
 

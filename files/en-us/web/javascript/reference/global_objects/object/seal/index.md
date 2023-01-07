@@ -1,6 +1,7 @@
 ---
 title: Object.seal()
 slug: Web/JavaScript/Reference/Global_Objects/Object/seal
+page-type: javascript-static-method
 tags:
   - ECMAScript 5
   - JavaScript
@@ -10,15 +11,16 @@ tags:
   - Reference
 browser-compat: javascript.builtins.Object.seal
 ---
+
 {{JSRef}}
 
-The **`Object.seal()`** method _seals_ an object. Sealing an object [prevents extensions](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/preventExtensions) and makes existing properties non-configurable. A sealed object has a fixed set of properties: new properties cannot be added, existing properties cannot be removed, their enumerability and configurability cannot be changed, and its prototype cannot be re-assigned. Values of existing properties can still be changed as long as they are writable. `seal()` returns the same object that was passed in.
+The **`Object.seal()`** static method _seals_ an object. Sealing an object [prevents extensions](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/preventExtensions) and makes existing properties non-configurable. A sealed object has a fixed set of properties: new properties cannot be added, existing properties cannot be removed, their enumerability and configurability cannot be changed, and its prototype cannot be re-assigned. Values of existing properties can still be changed as long as they are writable. `seal()` returns the same object that was passed in.
 
 {{EmbedInteractiveExample("pages/js/object-seal.html")}}
 
 ## Syntax
 
-```js
+```js-nolint
 Object.seal(obj)
 ```
 
@@ -65,7 +67,7 @@ delete obj.prop;
 const o = Object.seal(obj);
 
 o === obj; // true
-Object.isSealed(obj); // === true
+Object.isSealed(obj); // true
 
 // Changing property values on a sealed object
 // still works.
@@ -103,11 +105,9 @@ Object.defineProperty(obj, 'foo', {
 }); // changes existing property value
 ```
 
-### Non-object coercion
+### Non-object argument
 
-In ES5, if the argument to this method is not an object (a primitive), then it will
-cause a {{jsxref("TypeError")}}. In ES2015, a non-object argument will be treated as if
-it was a sealed ordinary object by returning it.
+In ES5, if the argument to this method is not an object (a primitive), then it will cause a {{jsxref("TypeError")}}. In ES2015, a non-object argument will be returned as-is without any errors, since primitives are already, by definition, immutable.
 
 ```js
 Object.seal(1);

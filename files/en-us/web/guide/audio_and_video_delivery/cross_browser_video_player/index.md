@@ -7,6 +7,9 @@ tags:
   - Video
   - full screen
 ---
+
+{{QuickLinksWithSubPages("/en-US/docs/Web/Guide/Audio_and_video_delivery")}}
+
 This article describes a simple HTML video player that uses the Media and Fullscreen APIs and works across most major desktop and mobile browsers. As well as working fullscreen, the player features custom controls rather than just using the browser defaults. The player controls themselves won't be styled beyond the basics required to get them working; full styling of the player will be taken care of in a future article.
 
 ## Working example
@@ -27,22 +30,23 @@ First of all the {{ htmlelement("video") }} element is defined, contained within
 
 ```html
 <figure id="videoContainer">
-   <video id="video" controls preload="metadata" poster="img/poster.jpg">
-      <source src="video/tears-of-steel-battle-clip-medium.mp4" type="video/mp4">
-      <source src="video/tears-of-steel-battle-clip-medium.webm" type="video/webm">
-      <source src="video/tears-of-steel-battle-clip-medium.ogg" type="video/ogg">
-      <!-- Flash fallback -->
-      <object type="application/x-shockwave-flash" data="flash-player.swf?videoUrl=video/tears-of-steel-battle-clip-medium.mp4" width="1024" height="576">
-         <param name="movie" value="flash-player.swf?videoUrl=video/tears-of-steel-battle-clip-medium.mp4" />
-         <param name="allowfullscreen" value="true" />
-         <param name="wmode" value="transparent" />
-         <param name="flashvars" value="controlbar=over&amp;image=img/poster.jpg&amp;file=flash-player.swf?videoUrl=video/tears-of-steel-battle-clip-medium.mp4" />
-         <img alt="Tears of Steel poster image" src="img/poster.jpg" width="1024" height="428" title="No video playback possible, please download the video from the link below" />
-      </object>
-      <!-- Offer download -->
-      <a href="video/tears-of-steel-battle-clip-medium.mp4">Download MP4</a>
-   </video>
-   <figcaption>&copy; Blender Foundation | <a href="http://mango.blender.org">mango.blender.org</a></figcaption>
+  <video id="video" controls preload="metadata" poster="img/poster.jpg">
+    <source
+      src="video/tears-of-steel-battle-clip-medium.mp4"
+      type="video/mp4" />
+    <source
+      src="video/tears-of-steel-battle-clip-medium.webm"
+      type="video/webm" />
+    <source
+      src="video/tears-of-steel-battle-clip-medium.ogg"
+      type="video/ogg" />
+    <!-- Offer download -->
+    <a href="video/tears-of-steel-battle-clip-medium.mp4">Download MP4</a>
+  </video>
+  <figcaption>
+    &copy; Blender Foundation |
+    <a href="http://mango.blender.org">mango.blender.org</a>
+  </figcaption>
 </figure>
 ```
 
@@ -53,8 +57,6 @@ A poster image is defined for the video, and the `preload` attribute is set to `
 > **Note:** IE9 behaves differently than most other browsers when a `poster` attribute is set. Most browsers interpret the presence of a `poster` attribute to mean that the specified image is to be displayed until the user chooses to play the video. IE9 will only use the specified poster image in this way if `preload="none"` is set; otherwise, it will take the first still of the video and display that instead.
 
 Three different video sources are provided for the player: MP4, WebM, and Ogg. Using these different source formats gives the best chance of being supported across all browsers that support HTML video. For further information on video formats and browser compatibility, see [supported media formats](/en-US/docs/Web/Media/Formats#browser_compatibility).
-
-For browsers that do not support HTML video, a Flash player is provided that will allow playback of the MP4 video source, provided the end user has Flash installed. In addition a download link is displayed to allow users to download the MP4 video file, should they wish to (providing those without Flash installed with a method of viewing the video, a fallback for a fallback if you like).
 
 The code above would allow playback of the video in most browsers, using the browser's default control set. The next step is to define a custom control set, also in HTML, which will be used to control the video.
 
@@ -75,17 +77,17 @@ Once again the HTML is quite straightforward, using an unordered list with `list
 
 ```html
 <ul id="video-controls" class="controls">
-   <li><button id="playpause" type="button">Play/Pause</button></li>
-   <li><button id="stop" type="button">Stop</button></li>
-   <li class="progress">
-      <progress id="progress" value="0" min="0">
-         <span id="progress-bar"></span>
-      </progress>
-   </li>
-   <li><button id="mute" type="button">Mute/Unmute</button></li>
-   <li><button id="volinc" type="button">Vol+</button></li>
-   <li><button id="voldec" type="button">Vol-</button></li>
-   <li><button id="fs" type="button">Fullscreen</button></li>
+  <li><button id="playpause" type="button">Play/Pause</button></li>
+  <li><button id="stop" type="button">Stop</button></li>
+  <li class="progress">
+    <progress id="progress" value="0" min="0">
+      <span id="progress-bar"></span>
+    </progress>
+  </li>
+  <li><button id="mute" type="button">Mute/Unmute</button></li>
+  <li><button id="volinc" type="button">Vol+</button></li>
+  <li><button id="voldec" type="button">Vol-</button></li>
+  <li><button id="fs" type="button">Fullscreen</button></li>
 </ul>
 ```
 
@@ -103,7 +105,7 @@ HTML comes with a JavaScript [Media API](/en-US/docs/Web/API/HTMLMediaElement) t
 
 Before dealing with the individual buttons, a number of initialization calls are required.
 
-To begin with, it's a good idea to first check if the browser actually supports the {{ htmlelement("video") }} element and to only setup the custom controls if it does. This is done by checking if a created {{ htmlelement("video") }} element supports [the `canPlayType()` method](https://html.spec.whatwg.org/multipage/media.html#dom-navigator-canplaytype), which any supported HTML {{ htmlelement("video") }} element should.
+To begin with, it's a good idea to first check if the browser actually supports the {{ htmlelement("video") }} element and to only set up the custom controls if it does. This is done by checking if a created {{ htmlelement("video") }} element supports [the `canPlayType()` method](https://html.spec.whatwg.org/multipage/media.html#dom-navigator-canplaytype), which any supported HTML {{ htmlelement("video") }} element should.
 
 ```js
 const supportsVideo = !!document.createElement('video').canPlayType;
@@ -158,7 +160,7 @@ playpause.addEventListener('click', (e) => {
 });
 ```
 
-When a `click` event is detected on the play/pause button, the handler first of all checks if the video is currently paused or has ended (via the Media API's `paused` and `ended` attributes); if so, it uses the `play()` method to playback the video. Otherwise the video must be playing, so it is paused using the `pause()` method.
+When a `click` event is detected on the play/pause button, the handler first of all checks if the video is currently paused or has ended (via the Media API's `paused` and `ended` attributes); if so, it uses the `play()` method to play back the video. Otherwise the video must be playing, so it is paused using the `pause()` method.
 
 ### Stop
 
@@ -263,7 +265,7 @@ This piece of code uses the clicked position to (roughly) work out where in the 
 
 The Fullscreen API should be straight forward to use: the user clicks a button, if the video is in fullscreen mode: cancel it, otherwise enter fullscreen mode.
 
-Alas it has been implemented in browsers in a number of weird and wonderful ways which requires a lot of extra code to check for various prefixed versions of attributes and methods so as to call the right one.
+Alas it has been implemented in browsers in a number of weird and wonderful ways which requires a lot of extra code to check for various prefixed versions of attributes and methods to call the right one.
 
 The visibility of the fullscreen button depends on whether the browser supports the Fullscreen API and that it is enabled:
 

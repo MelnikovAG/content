@@ -8,6 +8,9 @@ tags:
   - HTML
   - NeedsActiveLearning
 ---
+
+{{QuicklinksWithSubPages("Learn/Common_questions")}}
+
 When designing pages for your website, it's good to have an idea of the most common layouts.
 
 <table class="standard-table">
@@ -62,7 +65,7 @@ These elements are quite common in all form factors, but they can be laid out di
 
 The real fun begins when you start mixing them all together:
 
-![Example of mixed layout: Main on top and asides beneath it side by side.](1-col-layout-alt.png) ![Example of a mixed layout: Main on the left column and asides stack on top of each other on the right column](2-col-layout-left-alt.png) ![Example of a mixed layout: one aside on the left column and main in the right column with a aside beneath main.](2-col-layout-mix.png) ![Example of a mixed layout: Main on the left of the first row and one aside on the right of that same row, a second aside covering the whole second row.](2-col-layout-mix-alt.png)…
+![Example of mixed layout: Main on top and asides beneath it side by side.](1-col-layout-alt.png) ![Example of a mixed layout: Main on the left column and asides stack on top of each other on the right column](2-col-layout-left-alt.png) ![Example of a mixed layout: one aside on the left column and main in the right column with an aside beneath main.](2-col-layout-mix.png) ![Example of a mixed layout: Main on the left of the first row and one aside on the right of that same row, a second aside covering the whole second row.](2-col-layout-mix-alt.png)…
 
 These are just examples and you're quite free to lay things out as you want. You may notice that, while the content can move around on the screen, we always keep the header (1) on top and the footer (2) at the bottom. Also, the main content (A) matters most, so give it most of the space.
 
@@ -80,7 +83,7 @@ Let's study some more concrete examples taken from well-known websites.
 
 **[Invision application](https://www.invisionapp.com/)**. A typical one-column layout providing all the information linearly on one page.
 
-![Example of a 1 column layout in the wild](screenshot-product.jpg)        ![1 column layout with header, main content, a stack of aside contents and a footer](screenshot-product-overlay.jpg)
+![Example of a 1 column layout in the wild](screenshot-product.jpg) ![1 column layout with header, main content, a stack of aside contents and a footer](screenshot-product-overlay.jpg)
 
 Quite straightforward. Just remember, many people will still browse your site from desktops, so make your content usable/readable there as well.
 
@@ -88,7 +91,7 @@ Quite straightforward. Just remember, many people will still browse your site fr
 
 **[Abduzeedo](https://abduzeedo.com/typography-mania-261)**, a simple blog layout. Blogs usually have two columns, a fat one for the main content and a thin one for stuff on the side (like widgets, secondary navigation levels, and ads).
 
-![Example of a 2 column layout for a blog](screenshot-blog.jpg)        ![A 2 column layout with the main content on the left column](screenshot-blog-overlay.jpg)
+![Example of a 2 column layout for a blog](screenshot-blog.jpg) ![A 2 column layout with the main content on the left column](screenshot-blog-overlay.jpg)
 
 In this example, look at the image (B1) right underneath the header. It's related to the main content, but the main content makes sense without it, so you could think of the image either as main content or as side content. It doesn't really matter. What does matter is, if you put something right under the header, it should either be main content or _directly related_ to the main content.
 
@@ -96,7 +99,7 @@ In this example, look at the image (B1) right underneath the header. It's relate
 
 **[MICA](https://www.mica.edu/about-mica/)**. This is a bit trickier. It looks like a three-column layout:
 
-![Example of a false 3 columns layout](screenshot-education.jpg)        ![It looks like a 3 columns layout but actually, the aside content is floating around.](screenshot-education-overlay.jpg)
+![Example of a false 3 columns layout](screenshot-education.jpg) ![It looks like a 3 columns layout but actually, the aside content is floating around.](screenshot-education-overlay.jpg)
 
 But it's not! B1 and B2 float around the main content. Remember that word "float"--it will ring a bell when you start learning about {{Glossary("CSS")}}.
 
@@ -108,7 +111,7 @@ This is a good example of a classic layout supporting some design creativity. Si
 
 **The Opera de Paris**.
 
-![An example of a tricky layout.](screenshot-opera.jpg)        ![This is a 2 column layout but the header is overlapping the main content.](screenshot-opera-overlay.jpg)
+![An example of a tricky layout.](screenshot-opera.jpg) ![This is a 2 column layout but the header is overlapping the main content.](screenshot-opera-overlay.jpg)
 
 Basically a two-column layout, but you'll notice many tweaks here and there that visually break up the layout. Especially, the header overlaps the image of the main content. The way the curve of the header's menu ties in with the curve at the bottom of the image, the header and main content look like one thing even though they're technically completely different. The Opera example looks more complex than the MICA example, but it's actually easier to implement (all right, "easy" _is_ a relative concept).
 

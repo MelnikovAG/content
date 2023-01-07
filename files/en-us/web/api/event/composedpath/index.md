@@ -8,6 +8,7 @@ tags:
   - Web Components
 browser-compat: api.Event.composedPath
 ---
+
 {{APIRef("Shadow DOM")}}
 
 The **`composedPath()`** method of the {{domxref("Event")}}
@@ -17,8 +18,8 @@ created with its {{domxref("ShadowRoot.mode")}} closed.
 
 ## Syntax
 
-```js
-const composed = Event.composedPath();
+```js-nolint
+const composed = Event.composedPath()
 ```
 
 ### Parameters
@@ -92,13 +93,13 @@ event is always able to propagate across shadow boundaries. Second, you'll notic
 difference in the value of `composedPath` for the two elements. The
 `<open-shadow>` element's composed path is this:
 
-```
+```plain
 Array [ p, ShadowRoot, open-shadow, body, html, HTMLDocument https://mdn.github.io/web-components-examples/composed-composed-path/, Window ]
 ```
 
 Whereas the `<closed-shadow>` element's composed path is a follows:
 
-```
+```plain
 Array [ closed-shadow, body, html, HTMLDocument https://mdn.github.io/web-components-examples/composed-composed-path/, Window ]
 ```
 

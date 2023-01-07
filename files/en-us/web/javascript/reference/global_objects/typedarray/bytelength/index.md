@@ -1,6 +1,7 @@
 ---
 title: TypedArray.prototype.byteLength
 slug: Web/JavaScript/Reference/Global_Objects/TypedArray/byteLength
+page-type: javascript-instance-accessor-property
 tags:
   - JavaScript
   - Property
@@ -9,6 +10,7 @@ tags:
   - TypedArrays
 browser-compat: javascript.builtins.TypedArray.byteLength
 ---
+
 {{JSRef}}
 
 The **`byteLength`** accessor property represents the length (in bytes) of the typed array.

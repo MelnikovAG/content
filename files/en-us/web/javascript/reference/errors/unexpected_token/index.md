@@ -1,12 +1,14 @@
 ---
 title: 'SyntaxError: Unexpected token'
 slug: Web/JavaScript/Reference/Errors/Unexpected_token
+page-type: javascript-error
 tags:
   - Error
   - Errors
   - JavaScript
   - SyntaxError
 ---
+
 {{jsSidebar("Errors")}}
 
 The JavaScript exceptions "unexpected token" occur when a specific language construct
@@ -14,7 +16,7 @@ was expected, but something else was provided. This might be a simple typo.
 
 ## Message
 
-```
+```plain
 SyntaxError: expected expression, got "x"
 SyntaxError: expected property name, got "x"
 SyntaxError: expected target, got "x"

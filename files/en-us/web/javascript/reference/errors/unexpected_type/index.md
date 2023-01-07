@@ -1,12 +1,14 @@
 ---
 title: 'TypeError: "x" is (not) "y"'
 slug: Web/JavaScript/Reference/Errors/Unexpected_type
+page-type: javascript-error
 tags:
   - Error
   - Errors
   - JavaScript
   - TypeError
 ---
+
 {{jsSidebar("Errors")}}
 
 The JavaScript exception "_x_ is (not) _y_" occurs when there was an

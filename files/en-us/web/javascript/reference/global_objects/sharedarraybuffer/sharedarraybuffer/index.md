@@ -1,6 +1,7 @@
 ---
 title: SharedArrayBuffer() constructor
 slug: Web/JavaScript/Reference/Global_Objects/SharedArrayBuffer/SharedArrayBuffer
+page-type: javascript-constructor
 tags:
   - Constructor
   - JavaScript
@@ -8,6 +9,7 @@ tags:
   - SharedArrayBuffer
 browser-compat: javascript.builtins.SharedArrayBuffer.SharedArrayBuffer
 ---
+
 {{JSRef}}
 
 > **Note:** `SharedArrayBuffer` was disabled by default in all major
@@ -24,7 +26,7 @@ data buffer, similar to the {{jsxref("ArrayBuffer")}} object.
 
 ## Syntax
 
-```js
+```js-nolint
 new SharedArrayBuffer()
 new SharedArrayBuffer(length)
 ```

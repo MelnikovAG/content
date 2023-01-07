@@ -8,6 +8,21 @@ tags:
   - Media
   - Video
 ---
+
+<section id="Quick_links">
+  {{ListSubpagesForSidebar("/en-US/docs/Web/Guide/Audio_and_video_delivery")}}
+  <ol>
+    <li class="toggle">
+      <details>
+        <summary>Guides</summary>
+        <ol>
+          {{ListSubpagesForSidebar("/en-US/docs/Web/Guide")}}
+        </ol>
+      </details>
+    </li>
+  </ol>
+</section>
+
 We can deliver audio and video on the web in a number of ways, ranging from 'static' media files to adaptive live streams. This article is intended as a starting point for exploring the various delivery mechanisms of web based media and compatibility with popular browsers.
 
 ## The Audio and Video Elements
@@ -25,10 +40,10 @@ To deliver video and audio, the general workflow is usually something like this:
 
 ```html
 <audio controls preload="auto">
-  <source src="audiofile.mp3" type="audio/mpeg">
+  <source src="audiofile.mp3" type="audio/mpeg" />
 
   <!-- fallback for browsers that don't support mp3 -->
-  <source src="audiofile.ogg" type="audio/ogg">
+  <source src="audiofile.ogg" type="audio/ogg" />
 
   <!-- fallback for browsers that don't support audio tag -->
   <a href="audiofile.mp3">download audio</a>
@@ -44,15 +59,25 @@ For further info see [Cross Browser Audio Basics (HTML Audio In Detail)](/en-US/
 ### HTML Video
 
 ```html
-<video controls width="640" height="480" poster="initialimage.png" autoplay muted>
-  <source src="videofile.mp4" type="video/mp4">
+<video
+  controls
+  width="640"
+  height="480"
+  poster="initialimage.png"
+  autoplay
+  muted>
+  <source src="videofile.mp4" type="video/mp4" />
 
   <!-- fallback for browsers that don't support mp4 -->
-  <source src="videofile.webm" type="video/webm">
+  <source src="videofile.webm" type="video/webm" />
 
   <!-- specifying subtitle files -->
-  <track src="subtitles_en.vtt" kind="subtitles" srclang="en" label="English">
-  <track src="subtitles_no.vtt" kind="subtitles" srclang="no" label="Norwegian">
+  <track src="subtitles_en.vtt" kind="subtitles" srclang="en" label="English" />
+  <track
+    src="subtitles_no.vtt"
+    kind="subtitles"
+    srclang="no"
+    label="Norwegian" />
 
   <!-- fallback for browsers that don't support video tag -->
   <a href="videofile.mp4">download video</a>
@@ -127,7 +152,7 @@ try {
       source = context.createBufferSource();
       source.buffer = buffer;
       source.connect(context.destination);
-      // auto play
+      // autoplay
       source.start(0); // start was previously noteOn
     });
   };
@@ -173,7 +198,7 @@ To find out more, read our {{domxref("MediaDevices.getUserMedia")}} page.
 
 ## Mediastream Recording
 
-New standards are being rolled out to allow your browser to grab media from your mic or camera using `getUserMedia` and record it instantly using the new MediaRecorder API. You take the stream you receive from `getUserMedia`, pass it to a `MediaRecorder` object, take the resulting output and feed it to your audio or video source\*.
+New standards are being rolled out to allow your browser to grab media from your mic or camera using `getUserMedia` and record it instantly using the new MediaStream Recording API. You take the stream you receive from `getUserMedia`, pass it to a `MediaRecorder` object, take the resulting output and feed it to your audio or video source\*.
 
 The main mechanism is outlined below:
 
@@ -203,7 +228,7 @@ navigator.mediaDevices.getUserMedia({audio:true})
   });
 ```
 
-See [MediaRecorder API](/en-US/docs/Web/API/MediaStream_Recording_API) for more details.
+See [MediaStream Recording API](/en-US/docs/Web/API/MediaStream_Recording_API) for more details.
 
 ## Media Source Extensions (MSE)
 
@@ -215,7 +240,7 @@ See [MediaRecorder API](/en-US/docs/Web/API/MediaStream_Recording_API) for more 
 
 The API supports use cases ranging from simple clear key decryption to high value video (given an appropriate user agent implementation). License/key exchange is controlled by the application, facilitating the development of robust playback applications supporting a range of content decryption and protection technologies.
 
-One of the principle uses of EME is to allow browsers to implement DRM ([Digital Rights Management](https://en.wikipedia.org/wiki/Digital_rights_management)), which helps to prevent web-based content (especially video) from being copied.
+One of the principal uses of EME is to allow browsers to implement DRM ([Digital Rights Management](https://en.wikipedia.org/wiki/Digital_rights_management)), which helps to prevent web-based content (especially video) from being copied.
 
 ### Adaptive Streaming
 
@@ -225,7 +250,7 @@ The main formats used for adaptive streaming are [HLS](/en-US/docs/Web/Guide/Aud
 
 > **Note:** Currently Safari does not support DASH although dash.js will work on newer versions of Safari scheduled for release with OSX Yosemite.
 
-DASH also provides a number of profiles including simple onDemand profiles that no preprocessing and splitting up of media files. There are also a number of cloud based services that will convert your media to both HLS and DASH.
+DASH also provides a number of profiles including simple onDemand profiles that require no preprocessing and splitting up of media files. There are also a number of cloud based services that will convert your media to both HLS and DASH.
 
 For further information see [Live streaming web audio and video](/en-US/docs/Web/Guide/Audio_and_video_delivery/Live_streaming_web_audio_and_video).
 
@@ -240,7 +265,9 @@ You may detect click, touch and/or keyboard events to trigger actions such as pl
 A quick example — first set up your audio and custom controls in HTML:
 
 ```html
-<audio id="my-audio" src="http://jPlayer.org/audio/mp3/Miaow-01-Tempered-song.mp3"></audio>
+<audio
+  id="my-audio"
+  src="http://jPlayer.org/audio/mp3/Miaow-01-Tempered-song.mp3"></audio>
 <button id="my-control">play</button>
 ```
 
@@ -334,7 +361,7 @@ A few examples:
 
 ## Error handling
 
-Errors gets delivered to the child {{ HTMLElement("source") }} elements corresponding to the sources resulting in the error.
+Errors get delivered to the child {{ HTMLElement("source") }} elements corresponding to the sources resulting in the error.
 
 This lets you detect which sources failed to load, which may be useful. Consider this HTML:
 
@@ -401,7 +428,7 @@ Your files may have been encoded incorrectly — try encoding using one of the f
 - [Firefogg](http://www.firefogg.org/) — Video and Audio encoding for Firefox
 - [FFmpeg2](https://www.ffmpeg.org/) — Comprehensive command line encoder
 - [Libav](https://libav.org/) — Comprehensive command line encoder
-- [Vid.ly](https://m.vid.ly/) — Video player,transcoding and delivery
+- [Vid.ly](https://m.vid.ly/) — Video player, transcoding and delivery
 - [Internet Archive](https://archive.org/) — Free transcoding and storage
 
 ### Detecting when no sources have loaded
@@ -492,7 +519,7 @@ A number of audio and video JavaScript libraries exist. The most popular librari
 - [Writing Web Audio API code that works in every browser](/en-US/docs/Web/Guide/Audio_and_video_delivery/Web_Audio_API_cross_browser)
   - : A guide to writing cross browser Web Audio API code.
 - [Easy audio capture with the MediaRecorder API](https://hacks.mozilla.org/2014/06/easy-audio-capture-with-the-mediarecorder-api/)
-  - : Explains the basics of using the MediaRecorder API to directly record a media stream.
+  - : Explains the basics of using the MediaStream Recording API to directly record a media stream.
 
 > **Note:** Firefox OS versions 1.3 and above support the [RTSP](https://en.wikipedia.org/wiki/Real_Time_Streaming_Protocol) protocol for streaming video delivery. A fallback solution for older versions would be to use `<video>` along with a suitable format for Gecko (such as WebM) to serve fallback content. More information will be published on this in good time.
 
@@ -502,6 +529,6 @@ A number of audio and video JavaScript libraries exist. The most popular librari
 - [HTMLVideoElement API](/en-US/docs/Web/API/HTMLVideoElement)
 - [MediaSource API](/en-US/docs/Web/API/MediaSource)
 - [Web Audio API](/en-US/docs/Web/API/Web_Audio_API)
-- [MediaRecorder API](/en-US/docs/Web/API/MediaStream_Recording_API)
+- [MediaStream Recording API](/en-US/docs/Web/API/MediaStream_Recording_API)
 - [getUserMedia](/en-US/docs/Web/API/MediaDevices/getUserMedia)
 - [Event reference > Media](/en-US/docs/Web/Events#media)

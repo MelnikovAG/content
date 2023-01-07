@@ -8,6 +8,7 @@ tags:
   - Status code
 browser-compat: http.status.412
 ---
+
 {{HTTPSidebar}}
 
 The HyperText Transfer Protocol (HTTP)
@@ -21,7 +22,7 @@ cannot be made and this error response is sent back.
 
 ## Status
 
-```
+```http
 412 Precondition Failed
 ```
 

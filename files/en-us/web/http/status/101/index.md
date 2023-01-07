@@ -7,8 +7,9 @@ tags:
   - Informational
   - Reference
   - WebSockets
-spec-urls: https://httpwg.org/specs/rfc7231.html#section-6.2.2
+spec-urls: https://httpwg.org/specs/rfc9110.html#status.101
 ---
+
 {{HTTPSidebar}}
 
 The HTTP **`101 Switching Protocols`** response code indicates
@@ -21,7 +22,7 @@ indicate the protocol it switched to. The process is described in the following 
 
 ## Status
 
-```
+```http
 101 Switching Protocols
 ```
 

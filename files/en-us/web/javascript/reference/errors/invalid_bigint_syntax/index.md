@@ -7,13 +7,14 @@ tags:
   - JavaScript
   - SyntaxError
 ---
+
 {{jsSidebar("Errors")}}
 
 The JavaScript exception "invalid BigInt syntax" occurs when a string value is being coerced to a {{jsxref("BigInt")}} but it failed to be parsed as an integer.
 
 ## Message
 
-```
+```plain
 SyntaxError: Cannot convert x to a BigInt (V8-based)
 SyntaxError: invalid BigInt syntax (Firefox)
 SyntaxError: Failed to parse String to BigInt (Safari)

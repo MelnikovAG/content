@@ -1,12 +1,14 @@
 ---
 title: 'SyntaxError: missing ) after argument list'
 slug: Web/JavaScript/Reference/Errors/Missing_parenthesis_after_argument_list
+page-type: javascript-error
 tags:
   - Error
   - Errors
   - JavaScript
   - SyntaxError
 ---
+
 {{jsSidebar("Errors")}}
 
 The JavaScript exception "missing ) after argument list" occurs when there is an error

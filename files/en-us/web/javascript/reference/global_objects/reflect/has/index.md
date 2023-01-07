@@ -1,6 +1,7 @@
 ---
 title: Reflect.has()
 slug: Web/JavaScript/Reference/Global_Objects/Reflect/has
+page-type: javascript-static-method
 tags:
   - ECMAScript 2015
   - JavaScript
@@ -10,16 +11,17 @@ tags:
   - Polyfill
 browser-compat: javascript.builtins.Reflect.has
 ---
+
 {{JSRef}}
 
-The static **`Reflect.has()`** method works like the [`in` operator](/en-US/docs/Web/JavaScript/Reference/Operators/in)
+The **`Reflect.has()`** static method works like the [`in` operator](/en-US/docs/Web/JavaScript/Reference/Operators/in)
 as a function.
 
 {{EmbedInteractiveExample("pages/js/reflect-has.html")}}
 
 ## Syntax
 
-```js
+```js-nolint
 Reflect.has(target, propertyKey)
 ```
 
@@ -59,7 +61,7 @@ Reflect.has({x: 0}, 'toString')
 
 // Proxy with .has() handler method
 obj = new Proxy({}, {
-  has(t, k) { return k.startsWith('door')  }
+  has(t, k) { return k.startsWith('door') }
 });
 Reflect.has(obj, 'doorbell')  // true
 Reflect.has(obj, 'dormitory')  // false

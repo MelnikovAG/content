@@ -1,6 +1,7 @@
 ---
 title: <ellipse>
 slug: Web/SVG/Element/ellipse
+page-type: svg-element
 tags:
   - Element
   - Reference
@@ -8,6 +9,7 @@ tags:
   - SVG Graphics
 browser-compat: svg.elements.ellipse
 ---
+
 {{SVGRef}}
 
 The **`<ellipse>`** element is an SVG basic shape, used to create ellipses based on a center coordinate, and both their x and y radius.
@@ -17,7 +19,11 @@ The **`<ellipse>`** element is an SVG basic shape, used to create ellipses based
 ## Example
 
 ```css hidden
-html,body,svg { height:100% }
+html,
+body,
+svg {
+  height: 100%;
+}
 ```
 
 ```html

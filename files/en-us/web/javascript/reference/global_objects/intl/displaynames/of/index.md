@@ -1,6 +1,7 @@
 ---
 title: Intl.DisplayNames.prototype.of()
 slug: Web/JavaScript/Reference/Global_Objects/Intl/DisplayNames/of
+page-type: javascript-instance-method
 tags:
   - DisplayNames
   - Internationalization
@@ -23,7 +24,7 @@ The **`Intl.DisplayNames.prototype.of()`** method receives a code and returns a 
 
 ## Syntax
 
-```js
+```js-nolint
 of(code)
 ```
 

@@ -10,6 +10,10 @@ tags:
   - Web
 ---
 
+<section id="Quick_links">
+  {{ListSubpagesForSidebar("/en-US/docs/Web/Guide")}}
+</section>
+
 Houdini is a set of low-level APIs that exposes parts of the CSS engine,
 giving developers the power to extend CSS by hooking into the styling and layout process of a browser's rendering engine.
 Houdini is a group of APIs that give developers direct access to the [CSS Object Model](/en-US/docs/Web/API/CSS_Object_Model) (CSSOM),
@@ -46,6 +50,7 @@ which register completely configurable worklets.
 > **Note:** You can write your own worklets, or install components created by other people.
 > The [Houdini.how](https://houdini.how/) website is a collection of worklets,
 > with [instructions on how to use them](https://houdini.how/usage/).
+
 The CSS `paint()` function is an additional function supported by the {{cssxref("image")}} type.
 It takes parameters that include the name of the worklet,
 plus additional parameters needed by the worklet.
@@ -121,7 +126,7 @@ Designed to improve the extensibility of CSS,
 this API enables developers to write their own layout algorithms,
 like masonry or line snapping.
 
-_This API has some partial support in Chrome Canary. It is not yet documented on MDN_
+_This API has some partial support in Chrome Canary. It is not yet documented on MDN._
 
 ### CSS Parser API
 

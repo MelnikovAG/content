@@ -1,6 +1,7 @@
 ---
 title: Atomics.waitAsync()
 slug: Web/JavaScript/Reference/Global_Objects/Atomics/waitAsync
+page-type: javascript-static-method
 tags:
   - Atomics
   - JavaScript
@@ -8,9 +9,10 @@ tags:
   - Shared Memory
 browser-compat: javascript.builtins.Atomics.waitAsync
 ---
+
 {{JSRef}}
 
-The static **`Atomics.waitAsync()`** method waits asynchronously on a shared memory location and returns a {{jsxref("Promise")}}.
+The **`Atomics.waitAsync()`** static method waits asynchronously on a shared memory location and returns a {{jsxref("Promise")}}.
 
 Unlike {{jsxref("Atomics.wait()")}}, `waitAsync` is non-blocking and usable on the main thread.
 
@@ -18,7 +20,7 @@ Unlike {{jsxref("Atomics.wait()")}}, `waitAsync` is non-blocking and usable on t
 
 ## Syntax
 
-```js
+```js-nolint
 Atomics.waitAsync(typedArray, index, value)
 Atomics.waitAsync(typedArray, index, value, timeout)
 ```

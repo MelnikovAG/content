@@ -1,12 +1,14 @@
 ---
 title: return
 slug: Web/JavaScript/Reference/Statements/return
+page-type: javascript-statement
 tags:
   - JavaScript
   - Language feature
   - Statement
 browser-compat: javascript.statements.return
 ---
+
 {{jsSidebar("Statements")}}
 
 The **`return`** statement ends function execution and
@@ -16,8 +18,8 @@ specifies a value to be returned to the function caller.
 
 ## Syntax
 
-```js
-return [expression];
+```js-nolint
+return [expression]
 ```
 
 - `expression`
@@ -102,7 +104,7 @@ function counter() {
 
 counter();
 
-// Output:
+// Logs:
 // 1A
 // 1B
 // 2A

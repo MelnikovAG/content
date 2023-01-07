@@ -11,6 +11,7 @@ tags:
   - importKey
 browser-compat: api.SubtleCrypto.importKey
 ---
+
 {{APIRef("Web Crypto API")}}{{SecureContext_header}}
 
 The **`importKey()`** method of the {{domxref("SubtleCrypto")}}
@@ -21,7 +22,7 @@ The function accepts several import formats: see [Supported formats](#supported_
 
 ## Syntax
 
-```js
+```js-nolint
 importKey(format, keyData, algorithm, extractable, keyUsages)
 ```
 
@@ -68,7 +69,7 @@ importKey(format, keyData, algorithm, extractable, keyUsages)
 ### Return value
 
 A [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise)
-  that fulfills with the imported key as a {{domxref("CryptoKey")}} object.
+that fulfills with the imported key as a {{domxref("CryptoKey")}} object.
 
 ### Exceptions
 
@@ -345,8 +346,8 @@ const jwkEcKey = {
 };
 
 /*
-Import a PEM encoded RSA private key, to use for RSA-PSS signing.
-Takes a string containing the PEM encoded key, and returns a Promise
+Import a JSON Web Key format EC private key, to use for ECDSA signing.
+Takes an object representing the JSON Web Key, and returns a Promise
 that will resolve to a CryptoKey representing the private key.
 */
 function importPrivateKey(jwk) {

@@ -1,8 +1,9 @@
 ---
-title: ':not()'
+title: ":not()"
 slug: Web/CSS/:not
+page-type: css-pseudo-class
 tags:
-  - ':not()'
+  - ":not()"
   - CSS
   - Layout
   - Negation
@@ -12,16 +13,12 @@ tags:
   - Web
 browser-compat: css.selectors.not
 ---
+
 {{CSSRef}}
 
 The **`:not()`** [CSS](/en-US/docs/Web/CSS) [pseudo-class](/en-US/docs/Web/CSS/Pseudo-classes) represents elements that do not match a list of selectors. Since it prevents specific items from being selected, it is known as the _negation pseudo-class_.
 
-```css
-/* Selects any element that is NOT a paragraph */
-:not(p) {
-  color: blue;
-}
-```
+{{EmbedInteractiveExample("pages/tabbed/pseudo-class-not.html", "tabbed-shorter")}}
 
 The `:not()` pseudo-class has a number of [quirks, tricks, and unexpected results](#description) that you should be aware of before using it.
 
@@ -110,7 +107,7 @@ h2 :not(span.foo) {
 
 - [Pseudo-classes](/en-US/docs/Web/CSS/Pseudo-classes)
 - [Pseudo-classes and pseudo-elements](/en-US/docs/Learn/CSS/Building_blocks/Selectors/Pseudo-classes_and_pseudo-elements)
-- Related CSS pseudo-classes:
+- Other functional CSS pseudo-classes:
 
   - {{cssxref(":has", ":has()")}}
   - {{cssxref(":is", ":is()")}}

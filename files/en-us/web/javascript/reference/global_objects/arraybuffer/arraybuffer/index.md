@@ -1,6 +1,7 @@
 ---
 title: ArrayBuffer() constructor
 slug: Web/JavaScript/Reference/Global_Objects/ArrayBuffer/ArrayBuffer
+page-type: javascript-constructor
 tags:
   - ArrayBuffer
   - Constructor
@@ -18,7 +19,7 @@ The **`ArrayBuffer()`** constructor is used to create {{jsxref("ArrayBuffer")}} 
 
 ## Syntax
 
-```js
+```js-nolint
 new ArrayBuffer(length)
 ```
 

@@ -10,7 +10,8 @@ tags:
   - Experimental
 browser-compat: api.NDEFRecord.encoding
 ---
-{{SecureContext_Header}}{{SeeCompatTable}}{{APIRef}}
+
+{{SecureContext_Header}}{{SeeCompatTable}}{{APIRef("Web NFC API")}}
 
 The **`encoding`**
 property of the {{DOMxRef("NDEFRecord")}} interface returns the encoding of
@@ -18,7 +19,7 @@ a textual payload, or `null` otherwise.
 
 ## Syntax
 
-```js
+```js-nolint
 NDEFRecord.encoding
 ```
 

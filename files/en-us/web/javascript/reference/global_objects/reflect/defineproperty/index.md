@@ -1,6 +1,7 @@
 ---
 title: Reflect.defineProperty()
 slug: Web/JavaScript/Reference/Global_Objects/Reflect/defineProperty
+page-type: javascript-static-method
 tags:
   - ECMAScript 2015
   - JavaScript
@@ -10,16 +11,17 @@ tags:
   - Polyfill
 browser-compat: javascript.builtins.Reflect.defineProperty
 ---
+
 {{JSRef}}
 
-The static **`Reflect.defineProperty()`** method is like
+The **`Reflect.defineProperty()`** static method is like
 {{jsxref("Object.defineProperty()")}} but returns a {{jsxref("Boolean")}}.
 
 {{EmbedInteractiveExample("pages/js/reflect-defineproperty.html")}}
 
 ## Syntax
 
-```js
+```js-nolint
 Reflect.defineProperty(target, propertyKey, attributes)
 ```
 
@@ -59,7 +61,7 @@ modification of a property on an object. For more details, see the
 
 ```js
 const obj = {};
-Reflect.defineProperty(obj, 'x', { value: 7 }); // true
+Reflect.defineProperty(obj, "x", { value: 7 }); // true
 console.log(obj.x); // 7
 ```
 

@@ -1,12 +1,14 @@
 ---
 title: 'SyntaxError: return not in function'
 slug: Web/JavaScript/Reference/Errors/Bad_return_or_yield
+page-type: javascript-error
 tags:
   - Error
   - Errors
   - JavaScript
   - SyntaxError
 ---
+
 {{jsSidebar("Errors")}}
 
 The JavaScript exception "return (or yield) not in function" occurs when a

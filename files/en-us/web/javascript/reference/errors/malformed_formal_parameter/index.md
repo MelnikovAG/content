@@ -1,12 +1,14 @@
 ---
 title: 'SyntaxError: Malformed formal parameter'
 slug: Web/JavaScript/Reference/Errors/Malformed_formal_parameter
+page-type: javascript-error
 tags:
   - Error
   - Errors
   - JavaScript
   - SyntaxError
 ---
+
 {{jsSidebar("Errors")}}
 
 The JavaScript exception "malformed formal parameter" occurs when the argument list of

@@ -1,6 +1,7 @@
 ---
 title: Reflect.ownKeys()
 slug: Web/JavaScript/Reference/Global_Objects/Reflect/ownKeys
+page-type: javascript-static-method
 tags:
   - ECMAScript 2015
   - JavaScript
@@ -10,16 +11,17 @@ tags:
   - Polyfill
 browser-compat: javascript.builtins.Reflect.ownKeys
 ---
+
 {{JSRef}}
 
-The static **`Reflect.ownKeys()`** method returns an array of
+The **`Reflect.ownKeys()`** static method returns an array of
 the `target` object's own property keys.
 
 {{EmbedInteractiveExample("pages/js/reflect-ownkeys.html")}}
 
 ## Syntax
 
-```js
+```js-nolint
 Reflect.ownKeys(target)
 ```
 

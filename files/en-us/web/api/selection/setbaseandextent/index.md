@@ -10,6 +10,7 @@ tags:
   - setBaseAndExtent
 browser-compat: api.Selection.setBaseAndExtent
 ---
+
 {{ ApiRef("DOM") }}
 
 The **`setBaseAndExtent()`** method of the
@@ -18,8 +19,8 @@ parts of two specified DOM nodes, and any content located between them.
 
 ## Syntax
 
-```js
-setBaseAndExtent(anchorNode,anchorOffset,focusNode,focusOffset)
+```js-nolint
+setBaseAndExtent(anchorNode, anchorOffset, focusNode, focusOffset)
 ```
 
 ### Parameters
@@ -77,17 +78,19 @@ selection into the output paragraph at the very bottom of the HTML.
 <div>
   <p>
     <label for="aOffset">Anchor offset</label>
-    <input id="aOffset" name="aOffset" type="number" value="0">
+    <input id="aOffset" name="aOffset" type="number" value="0" />
   </p>
   <p>
     <label for="fOffset">Focus offset</label>
-    <input id="fOffset" name="fOffset" type="number" value="0">
+    <input id="fOffset" name="fOffset" type="number" value="0" />
   </p>
   <p><button>Capture selection</button></p>
 </div>
 
 <p><strong>Output</strong>: <span class="output"></span></p>
 ```
+
+> **Note:** There is intentionally no [whitespace](/en-US/docs/Web/API/Document_Object_Model/Whitespace) between the `<p class="one">` and `<p class="two">` start tags and the `<span>` start tags which follow them — to avoid the presence of text nodes that would affect the number of child nodes expected. (Even though those text nodes would be whitespace-only, they would still be additional child nodes; find out more from the [`Node.firstChild` example](/en-US/docs/Web/API/Node/firstChild#example)).
 
 The JavaScript looks like so:
 

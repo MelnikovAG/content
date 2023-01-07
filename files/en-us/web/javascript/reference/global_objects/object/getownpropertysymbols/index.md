@@ -1,6 +1,7 @@
 ---
 title: Object.getOwnPropertySymbols()
 slug: Web/JavaScript/Reference/Global_Objects/Object/getOwnPropertySymbols
+page-type: javascript-static-method
 tags:
   - ECMAScript 2015
   - JavaScript
@@ -9,15 +10,16 @@ tags:
   - Polyfill
 browser-compat: javascript.builtins.Object.getOwnPropertySymbols
 ---
+
 {{JSRef}}
 
-The **`Object.getOwnPropertySymbols()`** method returns an array of all symbol properties found directly upon a given object.
+The **`Object.getOwnPropertySymbols()`** static method returns an array of all symbol properties found directly upon a given object.
 
 {{EmbedInteractiveExample("pages/js/object-getownpropertysymbols.html")}}
 
 ## Syntax
 
-```js
+```js-nolint
 Object.getOwnPropertySymbols(obj)
 ```
 

@@ -1,6 +1,7 @@
 ---
 title: Intl.NumberFormat.prototype.formatRangeToParts()
 slug: Web/JavaScript/Reference/Global_Objects/Intl/NumberFormat/formatRangeToParts
+page-type: javascript-instance-method
 tags:
   - Internationalization
   - Intl
@@ -11,10 +12,10 @@ tags:
   - Prototype
   - Reference
   - formatRangeToParts
-  - Experimental
 browser-compat: javascript.builtins.Intl.NumberFormat.formatRangeToParts
 ---
-{{JSRef}}{{SeeCompatTable}}
+
+{{JSRef}}
 
 The **`Intl.Numberformat.prototype.formatRangeToParts()`** method enables locale-aware formatting of strings produced by `NumberFormat` formatters.
 
@@ -23,13 +24,14 @@ This makes it possible to provide locale-aware custom formatting ranges of numbe
 
 ## Syntax
 
-```js
+```js-nolint
 formatRangeToParts(startRange, endRange)
 ```
 
 ### Parameters
 
 - `startRange`
+
   - : A {{jsxref("Number")}} or {{jsxref("BigInt")}}.
 
 - `endRange`

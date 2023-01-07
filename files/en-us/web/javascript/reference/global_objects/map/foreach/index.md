@@ -1,6 +1,7 @@
 ---
 title: Map.prototype.forEach()
 slug: Web/JavaScript/Reference/Global_Objects/Map/forEach
+page-type: javascript-instance-method
 tags:
   - ECMAScript 2015
   - JavaScript
@@ -10,6 +11,7 @@ tags:
   - Reference
 browser-compat: javascript.builtins.Map.forEach
 ---
+
 {{JSRef}}
 
 The **`forEach()`** method executes a provided function once per each key/value
@@ -19,7 +21,7 @@ pair in the `Map` object, in insertion order.
 
 ## Syntax
 
-```js
+```js-nolint
 // Arrow function
 forEach(() => { /* … */ } )
 forEach((value) => { /* … */ } )
@@ -91,7 +93,7 @@ function logMapElements(value, key, map) {
   console.log(`map.get('${key}') = ${value}`);
 }
 new Map([['foo', 3], ['bar', {}], ['baz', undefined]]).forEach(logMapElements);
-// logs:
+// Logs:
 // "map.get('foo') = 3"
 // "map.get('bar') = [object Object]"
 // "map.get('baz') = undefined"

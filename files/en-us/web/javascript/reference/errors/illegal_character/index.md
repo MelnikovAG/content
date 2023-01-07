@@ -1,12 +1,14 @@
 ---
 title: 'SyntaxError: illegal character'
 slug: Web/JavaScript/Reference/Errors/Illegal_character
+page-type: javascript-error
 tags:
   - Error
   - Errors
   - JavaScript
   - SyntaxError
 ---
+
 {{jsSidebar("Errors")}}
 
 The JavaScript exception "illegal character" occurs when there is an invalid or
@@ -28,8 +30,8 @@ SyntaxError: Invalid or unexpected token (Chrome)
 
 There is an invalid or unexpected token that doesn't belong at this position in the
 code. Use an editor that supports syntax highlighting and carefully check your code
-against mismatches like a minus sign (` - `) versus a dash (` – `)
-or simple quotes (` " `) vs non-standard quotation marks (` " `).
+against mismatches like a minus sign (`-`) versus a dash (`–`)
+or simple quotes (`"`) vs non-standard quotation marks (`"`).
 
 ## Examples
 

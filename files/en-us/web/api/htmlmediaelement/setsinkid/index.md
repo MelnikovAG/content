@@ -12,6 +12,7 @@ tags:
   - setSinkId
 browser-compat: api.HTMLMediaElement.setSinkId
 ---
+
 {{APIRef("HTML DOM")}}
 
 The **`HTMLMediaElement.setSinkId()`** method sets the ID of
@@ -20,7 +21,7 @@ This only works when the application is authorized to use the specified device.
 
 ## Syntax
 
-```js
+```js-nolint
 setSinkId(sinkId)
 ```
 
@@ -36,7 +37,7 @@ A {{jsxref("Promise")}} that resolves to {{jsxref("undefined")}}.
 ### Exceptions
 
 - `NotAllowedError` {{domxref("DOMException")}}
-  - : Returned if there is no permission to use the requested device.
+  - : Returned if a `speaker-selection` [Permissions Policy](/en-US/docs/Web/HTTP/Permissions_Policy) is used to block use of audio outputs.
 - `NotFoundError` {{domxref("DOMException")}}
   - : Returned if the `deviceId` does not match any audio output device.
 - `AbortError` {{domxref("DOMException")}}

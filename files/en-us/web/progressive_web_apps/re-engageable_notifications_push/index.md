@@ -9,6 +9,7 @@ tags:
   - js13kGames
   - progressive
 ---
+
 {{PreviousMenuNext("Web/Apps/Progressive/Installable_PWAs", "Web/Apps/Progressive/Loading", "Web/Apps/Progressive")}}
 
 Having the ability to cache the contents of an app to work offline is a great feature. Allowing the user to install the web app on their home screen is even better. But instead of relying only on user actions, we can do more, using push messages and notifications to automatically re-engage and deliver new content whenever it is available.
@@ -74,10 +75,12 @@ Push is more complicated than notifications — we need to subscribe to a server
 The technology is still at a very early stage — some working examples use the Google Cloud Messaging platform, but are being rewritten to support [VAPID](https://blog.mozilla.org/services/2016/08/23/sending-vapid-identified-webpush-notifications-via-mozillas-push-service/) (Voluntary Application Identification), which offers an extra layer of security for your app.
 You can examine the [Service Workers Cookbook examples](https://github.com/mdn/serviceworker-cookbook/tree/master/push-payload), try to set up a push messaging server using [Firebase](https://firebase.google.com/), or build your own server (using Node.js for example).
 
-As mentioned before, to be able to receive push messages, you have to have a service worker, the basics of which are already explained in the [Making PWAs work offline with Service workers](/en-US/docs/Web/Progressive_web_apps/Offline_Service_workers) article. Inside the service worker, a push service subscription mechanism is created.
+As mentioned before, to be able to receive push messages, you have to have a service worker, the basics of which are already explained in the [Making PWAs work offline with Service workers](/en-US/docs/Web/Progressive_web_apps/Offline_Service_workers) article. Inside the service worker, a push-service subscription mechanism is created by calling the [`getSubscription()`](/en-US/docs/Web/API/PushManager/getSubscription/) method of the [`PushManager`](/en-US/docs/Web/API/PushManager) interface.
 
 ```js
-registration.pushManager.getSubscription().then( /* ... */ );
+navigator.serviceWorker.register('service-worker.js')
+  .then((registration) => {
+    return registration.pushManager.getSubscription().then( /* ... */ );
 ```
 
 Once the user is subscribed, they can receive push notifications from the server.
@@ -208,7 +211,7 @@ if (!process.env.VAPID_PUBLIC_KEY || !process.env.VAPID_PRIVATE_KEY) {
 }
 
 webPush.setVapidDetails(
-  'https://serviceworke.rs/',
+  'https://example.com',
   process.env.VAPID_PUBLIC_KEY,
   process.env.VAPID_PRIVATE_KEY
 );

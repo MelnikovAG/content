@@ -5,7 +5,7 @@ tags:
   - HTML
   - Landing
   - Web
-  - l10n:priority
+  - "l10n:priority"
 ---
 
 {{HTMLSidebar}}
@@ -16,7 +16,7 @@ tags:
 
 HTML uses "markup" to annotate text, images, and other content for display in a Web browser. HTML markup includes special "elements" such as {{HTMLElement("head")}}, {{HTMLElement("title")}}, {{HTMLElement("body")}}, {{HTMLElement("header")}}, {{HTMLElement("footer")}}, {{HTMLElement("article")}}, {{HTMLElement("section")}}, {{HTMLElement("p")}}, {{HTMLElement("div")}}, {{HTMLElement("span")}}, {{HTMLElement("img")}}, {{HTMLElement("aside")}}, {{HTMLElement("audio")}}, {{HTMLElement("canvas")}}, {{HTMLElement("datalist")}}, {{HTMLElement("details")}}, {{HTMLElement("embed")}}, {{HTMLElement("nav")}}, {{HTMLElement("output")}}, {{HTMLElement("progress")}}, {{HTMLElement("video")}}, {{HTMLElement("ul")}}, {{HTMLElement("ol")}}, {{HTMLElement("li")}} and many others.
 
-An HTML element is set off from other text in a document by "tags", which consist of the element name surrounded by "`<`" and "`>`".  The name of an element inside a tag is case insensitive. That is, it can be written in uppercase, lowercase, or a mixture. For example, the `<title>` tag can be written as `<Title>`, `<TITLE>`, or in any other way. However, the convention and recommended practice is to write tags in lowercase.
+An HTML element is set off from other text in a document by "tags", which consist of the element name surrounded by "`<`" and "`>`". The name of an element inside a tag is case insensitive. That is, it can be written in uppercase, lowercase, or a mixture. For example, the `<title>` tag can be written as `<Title>`, `<TITLE>`, or in any other way. However, the convention and recommended practice is to write tags in lowercase.
 
 The articles below can help you learn more about HTML.
 
@@ -79,7 +79,7 @@ Our [HTML Learning Area](/en-US/docs/Learn/HTML) features multiple modules that 
 - [Guide to media types and formats on the web](/en-US/docs/Web/Media/Formats)
   - : The {{HTMLElement("audio")}} and {{HTMLElement("video")}} elements allow you to play audio and video media natively within your content without the need for external software support.
 - [HTML content categories](/en-US/docs/Web/Guide/HTML/Content_categories)
-  - : HTML is comprised of several kinds of content, each of which is allowed to be used in certain contexts and is disallowed in others. Similarly, each has a set of other content categories they can contain and elements that can or can't be used in them. This is a guide to these categories.
+  - : HTML is comprised of several kinds of content, each of which is allowed to be used in certain contexts and is disallowed in others. Similarly, each context has a set of other content categories it can contain and elements that can or can't be used in them. This is a guide to these categories.
 - [Quirks mode and standards mode](/en-US/docs/Web/HTML/Quirks_Mode_and_Standards_Mode)
   - : Historical information on quirks mode and standards mode.
 

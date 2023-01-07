@@ -10,6 +10,7 @@ tags:
   - Server
   - Server-side programming
 ---
+
 {{LearnSidebar}}{{NextMenu("Learn/Server-side/First_steps/Client-Server_overview", "Learn/Server-side/First_steps")}}
 
 Welcome to the MDN beginner's server-side programming course! In this first article, we look at server-side programming from a high level, answering questions such as "what is it?", "how does it differ from client-side programming?", and "why it is so useful?". After reading this article you'll understand the additional power available to websites through server-side coding.
@@ -68,7 +69,7 @@ Most of the code to support a dynamic website must run on the server. Creating t
 
 The diagram below shows a simple architecture for a _dynamic website_. As in the previous diagram, browsers send HTTP requests to the server, then the server processes the requests and returns appropriate HTTP responses.
 
-Requests for _static_ resources are handled in the same way as for static sites (static resources are any files that don't change —typically: CSS, JavaScript, Images, pre-created PDF files, etc.).
+Requests for _static_ resources are handled in the same way as for static sites (static resources are any files that don't change — typically: CSS, JavaScript, Images, pre-created PDF files, etc.).
 
 ![A simplified diagram of a web server that uses server-side programming to get information from a database and construct HTML from templates. This is the same diagram as is in the Client-Server overview.](web_application_with_html_and_steps.png)
 
@@ -165,7 +166,7 @@ Servers can send general or user-specific notifications through the website itse
 A few examples include:
 
 - Facebook and Twitter send emails and SMS messages to notify you of new communications.
-- Amazon regularly sends product e-mails that suggest products similar to those already bought or viewed that you might be interested in.
+- Amazon regularly sends product emails that suggest products similar to those already bought or viewed that you might be interested in.
 - A web server might send warning messages to site administrators alerting them to low memory on the server, or suspicious user activity.
 
 > **Note:** The most common type of notification is a "confirmation of registration". Pick almost any large site that you are interested in (Google, Amazon, Instagram, etc.) and create a new account using your email address. You will shortly receive an email confirming your registration, or requiring acknowledgment to activate your account.

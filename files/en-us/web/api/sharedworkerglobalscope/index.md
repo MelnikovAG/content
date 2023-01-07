@@ -10,22 +10,21 @@ tags:
   - Web Workers
 browser-compat: api.SharedWorkerGlobalScope
 ---
+
 {{APIRef("Web Workers API")}}
 
 The **`SharedWorkerGlobalScope`** object (the {{domxref("SharedWorker")}} global scope) is accessible through the {{domxref("window.self","self")}} keyword. Some additional global functions, namespaces objects, and constructors, not typically associated with the worker global scope, but available on it, are listed in the [JavaScript Reference](/en-US/docs/Web/JavaScript/Reference). See the complete list of [functions available to workers](/en-US/docs/Web/API/Web_Workers_API/Functions_and_classes_available_to_workers).
 
 {{InheritanceDiagram}}
 
-## Properties
+## Instance properties
 
 _This interface inherits properties from the {{domxref("WorkerGlobalScope")}} interface, and its parent {{domxref("EventTarget")}}._
 
 - {{domxref("SharedWorkerGlobalScope.name")}} {{ReadOnlyInline}}
   - : The name that the {{domxref("SharedWorker")}} was (optionally) given when it was created using the {{domxref("SharedWorker.SharedWorker", "SharedWorker()")}} constructor. This is mainly useful for debugging purposes.
-- {{domxref("SharedWorkerGlobalScope.applicationCache")}} {{ReadOnlyInline}} {{Deprecated_Inline}} {{Non-standard_Inline}}
-  - : This property returns the {{domxref("ApplicationCache")}} object for the worker.
 
-### Properties inherited from WorkerGlobalScope
+### Instance properties inherited from WorkerGlobalScope
 
 - {{domxref("WorkerGlobalScope.self")}}
   - : Returns an object reference to the `DedicatedWorkerGlobalScope` object itself.
@@ -38,7 +37,7 @@ _This interface inherits properties from the {{domxref("WorkerGlobalScope")}} in
 - {{domxref("WorkerGlobalScope.performance")}} {{ReadOnlyInline}} {{Non-standard_Inline}}
   - : Returns the {{domxref("Performance")}} object associated with the worker, which is a regular performance object, but with a subset of its properties and methods available.
 
-## Methods
+## Instance methods
 
 _This interface inherits methods from the {{domxref("WorkerGlobalScope")}} interface, and its parent {{domxref("EventTarget")}}._
 
@@ -58,9 +57,9 @@ _This interface inherits methods from the {{domxref("WorkerGlobalScope")}} inter
   - : Decodes a string of data which has been encoded using base-64 encoding.
 - {{domxref("btoa", "btoa()")}}
   - : Creates a base-64 encoded ASCII string from a string of binary data.
-- {{domxref("WindowTimers.clearInterval()")}}
+- {{domxref("clearInterval()")}}
   - : Cancels the repeated execution set using {{domxref("setInterval()")}}.
-- {{domxref("WindowTimers.clearTimeout()")}}
+- {{domxref("clearTimeout()")}}
   - : Cancels the repeated execution set using {{domxref("setTimeout()")}}.
 - {{domxref("setInterval()")}}
   - : Schedules the execution of a function every X milliseconds.

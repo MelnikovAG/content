@@ -19,6 +19,7 @@ tags:
   - rtc
 browser-compat: api.RTCDataChannel.message_event
 ---
+
 {{APIRef("WebRTC")}}
 
 The WebRTC **`message`** event is sent to the {{domxref("RTCDataChannel.message_event", "onmessage")}} event handler on an {{domxref("RTCDataChannel")}} object when a message has been received from the remote peer.
@@ -54,7 +55,7 @@ _Also inherits properties from its parent interface, {{domxref("Event")}}._
 - {{domxref("MessageEvent.lastEventId")}} {{ReadOnlyInline}}
   - : A string representing a unique ID for the event.
 - {{domxref("MessageEvent.source")}} {{ReadOnlyInline}}
-  - : A reference to the message emitter, one of {{domxref("WindowProxy")}}, {{domxref("MessagePort")}}, or {{domxref("ServiceWorker")}}.
+  - : A reference to the message emitter, one of {{glossary("WindowProxy")}}, {{domxref("MessagePort")}}, or {{domxref("ServiceWorker")}}.
 - {{domxref("MessageEvent.ports")}} {{ReadOnlyInline}}
   - : An array of {{domxref("MessagePort")}} objects representing the ports associated with the channel the message is being sent through (where appropriate, e.g. in channel messaging or when sending a message to a shared worker).
 

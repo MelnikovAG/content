@@ -9,6 +9,9 @@ tags:
   - Media
   - events
 ---
+
+{{QuickLinksWithSubPages("/en-US/docs/Web/Guide/Audio_and_video_delivery")}}
+
 This article provides:
 
 - a basic guide to creating a cross-browser HTML audio player with all the associated attributes, properties, and events explained
@@ -20,11 +23,13 @@ The code below is an example of a basic audio implementation using HTML5:
 
 ```html
 <audio controls>
-  <source src="audiofile.mp3" type="audio/mpeg">
-  <source src="audiofile.ogg" type="audio/ogg">
-  <!-- fallback for non supporting browsers goes here -->
-  <p>Your browser does not support HTML audio, but you can still
-     <a href="audiofile.mp3">download the music</a>.</p>
+  <source src="audiofile.mp3" type="audio/mpeg" />
+  <source src="audiofile.ogg" type="audio/ogg" />
+  <!-- fallback for non-supporting browsers goes here -->
+  <p>
+    Your browser does not support HTML audio, but you can still
+    <a href="audiofile.mp3">download the music</a>.
+  </p>
 </audio>
 ```
 
@@ -36,7 +41,7 @@ The code below is an example of a basic audio implementation using HTML5:
   - `src` contains the path to the audio file to be loaded (relative or absolute).
   - `type` is used to inform the browser of the file type. If omitted, most browsers will attempt to guess this from the file extension.
 
-- If the {{ htmlelement("audio") }} element is not supported then {{ htmlelement("audio") }} and {{ htmlelement("source") }} will be ignored. However any supported text or elements that you define within {{ htmlelement("audio") }} will be displayed or acted upon. So the ideal place to create a fallback or inform of incompatibility is before the closing `</audio>` tag. In this case, we've provided a simple paragraph including a link to download the audio directly.
+- If the {{ htmlelement("audio") }} element is not supported then {{ htmlelement("audio") }} and {{ htmlelement("source") }} will be ignored. However, any supported text or elements that you define within {{ htmlelement("audio") }} will be displayed or acted upon. So the ideal place to create a fallback or inform of incompatibility is before the closing `</audio>` tag. In this case, we've provided a simple paragraph including a link to download the audio directly.
 - The `controls` attribute on the {{ htmlelement("audio") }} element is specified when we require the browser to provide us with default playback controls. If you don't specify this attribute, no controls will appear — and you will instead have to create your own controls and program their functionality using the Media API (see below). However, that can be a good approach, because the default controls look different among various browsers. So creating your own controls ensures a consistent look for the controls across all browsers.
 
 ## HTML audio in detail
@@ -52,21 +57,17 @@ We can specify a number of attributes with the audio tag to further determine th
 Specifying `autoplay` will cause the audio to start playing as soon as possible and without any user interaction — in short, the audio will autoplay.
 
 ```html
-<audio autoplay>
-  …
-</audio>
+<audio autoplay>…</audio>
 ```
 
-> **Note:** This value is often ignored on mobile platforms, and its use is not recommended unless really necessary. Auto-playing audio (and video) is usually really annoying. Plus browsers have policies that will block autoplay entirely in many situations. See the [Autoplay guide for media and Web Audio APIs](/en-US/docs/Web/Media/Autoplay_guide) for details.
+> **Note:** This value is often ignored on mobile platforms, and its use is not recommended unless really necessary. Autoplaying audio (and video) is usually really annoying. Plus browsers have policies that will block autoplay entirely in many situations. See the [Autoplay guide for media and Web Audio APIs](/en-US/docs/Web/Media/Autoplay_guide) for details.
 
 #### loop
 
 The `loop` attribute will ensure that upon getting to the end of the audio clip, the audio clip will loop back to the beginning and start playing again.
 
 ```html
-<audio loop>
-  …
-</audio>
+<audio loop>…</audio>
 ```
 
 #### muted
@@ -74,9 +75,7 @@ The `loop` attribute will ensure that upon getting to the end of the audio clip,
 If you want the audio to start muted (no volume), add the `muted` attribute.
 
 ```html
-<audio muted>
-  …
-</audio>
+<audio muted>…</audio>
 ```
 
 > **Note:** This value is often ignored on mobile platforms.
@@ -94,9 +93,7 @@ The `preload` attribute allows you to specify a preference for how the browser p
 > **Note:** This value is often ignored on mobile platforms.
 
 ```html
-<audio preload="auto">
-  …
-</audio>
+<audio preload="auto">…</audio>
 ```
 
 #### controls
@@ -104,9 +101,7 @@ The `preload` attribute allows you to specify a preference for how the browser p
 We specify the `controls` attribute when we require the browser to provide us with its default playback controls.
 
 ```html
-<audio controls>
-  …
-</audio>
+<audio controls>…</audio>
 ```
 
 #### src
@@ -114,9 +109,7 @@ We specify the `controls` attribute when we require the browser to provide us wi
 As mentioned above, you can use the {{ htmlelement("source") }} element to specify one or more source audio files. Alternatively, you can include the `src` attribute directly on the {{ htmlelement("audio") }} element to specify a single source file.
 
 ```html
-<audio src="audiofile.mp3">
-  …
-</audio>
+<audio src="audiofile.mp3">…</audio>
 ```
 
 #### type
@@ -124,9 +117,7 @@ As mentioned above, you can use the {{ htmlelement("source") }} element to speci
 As mentioned above, to be sure that the browser knows what type of file is being specified, it's good practice to specify a `type` attribute alongside the `src` attribute. The `type` attribute specifies the MIME type or Internet Media Type of the file.
 
 ```html
-<audio src="audiofile.mp3" type="audio/mpeg">
-  …
-</audio>
+<audio src="audiofile.mp3" type="audio/mpeg">…</audio>
 ```
 
 ### Manipulating the Audio Element with JavaScript
@@ -136,9 +127,7 @@ In addition to being able to specify various attributes in HTML, the {{ htmlelem
 Given the following HTML:
 
 ```html
-<audio id="my-audio" src="audiofile.mp3">
-  …
-</audio>
+<audio id="my-audio" src="audiofile.mp3">…</audio>
 ```
 
 You can grab the {{htmlelement("audio") }} element like this:
@@ -242,8 +231,8 @@ The JavaScript media API allows you to create your own custom player. Let's take
 
 ```html
 <audio id="my-audio">
-  <source src="audiofile.mp3" type="audio/mpeg">
-  <source src="audiofile.ogg" type="audio/ogg">
+  <source src="audiofile.mp3" type="audio/mpeg" />
+  <source src="audiofile.ogg" type="audio/ogg" />
   <!-- place fallback here as <audio> supporting browsers will ignore it -->
   <p>Download<a href="audiofile.mp3">audiofile.mp3</a></p>
 </audio>
@@ -367,7 +356,7 @@ We also have a few events available that will fire when there is some kind of in
 - abort
   - : Media data download has been aborted but not due to an error.
 - error
-  - : An error is encountered while media data is being download.
+  - : An error is encountered while media data is being downloaded.
 - emptied
   - : The media buffer has been emptied, possibly due to an error or because the load() method was invoked to reload it.
 - stalled
@@ -423,8 +412,12 @@ Consider this snippet of HTML:
 
 ```html
 <audio id="my-audio">
-  <source src="http://jPlayer.org/audio/mp3/Miaow-07-Bubble.mp3" type="audio/mpeg">
-  <source src="http://jPlayer.org/audio/ogg/Miaow-07-Bubble.ogg" type="audio/ogg">
+  <source
+    src="http://jPlayer.org/audio/mp3/Miaow-07-Bubble.mp3"
+    type="audio/mpeg" />
+  <source
+    src="http://jPlayer.org/audio/ogg/Miaow-07-Bubble.ogg"
+    type="audio/ogg" />
   <!-- place fallback here as <audio> supporting browsers will ignore it -->
   <a href="audiofile.mp3">audiofile.mp3</a>
 </audio>
@@ -432,7 +425,7 @@ Consider this snippet of HTML:
 <div id="controls">
   <span id="loading">loading</span>
   <button id="play" style="display:none">play</button>
-  <button id="pause" style="display:none" >pause</button>
+  <button id="pause" style="display:none">pause</button>
 </div>
 <div id="progress">
   <div id="bar"></div>
@@ -443,19 +436,19 @@ Styled like so:
 
 ```css
 #controls {
-   width: 80px;
-   float: left;
+  width: 80px;
+  float: left;
 }
 
 #progress {
-   margin-left: 80px;
-   border: 1px solid black;
+  margin-left: 80px;
+  border: 1px solid black;
 }
 
 #bar {
-   height: 20px;
-   background-color: green;
-   width: 0;
+  height: 20px;
+  background-color: green;
+  width: 0;
 }
 ```
 
@@ -516,9 +509,9 @@ First of all, we apply a quick update to the progress bar CSS to display the han
 
 ```css
 #progress {
-   margin-left: 80px;
-   border: 1px solid black;
-   cursor: pointer;
+  margin-left: 80px;
+  border: 1px solid black;
+  cursor: pointer;
 }
 ```
 

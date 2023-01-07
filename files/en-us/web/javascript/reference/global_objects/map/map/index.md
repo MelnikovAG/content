@@ -1,6 +1,7 @@
 ---
 title: Map() constructor
 slug: Web/JavaScript/Reference/Global_Objects/Map/Map
+page-type: javascript-constructor
 tags:
   - Constructor
   - JavaScript
@@ -9,13 +10,14 @@ tags:
   - Polyfill
 browser-compat: javascript.builtins.Map.Map
 ---
+
 {{JSRef}}
 
 The **`Map()` constructor** creates {{jsxref("Map")}} objects.
 
 ## Syntax
 
-```js
+```js-nolint
 new Map()
 new Map(iterable)
 ```

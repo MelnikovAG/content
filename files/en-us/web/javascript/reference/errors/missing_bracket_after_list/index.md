@@ -1,12 +1,14 @@
 ---
 title: 'SyntaxError: missing ] after element list'
 slug: Web/JavaScript/Reference/Errors/Missing_bracket_after_list
+page-type: javascript-error
 tags:
   - Error
   - Errors
   - JavaScript
   - SyntaxError
 ---
+
 {{jsSidebar("Errors")}}
 
 The JavaScript exception "missing ] after element list" occurs when there is an error

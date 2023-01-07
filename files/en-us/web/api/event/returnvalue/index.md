@@ -8,6 +8,7 @@ tags:
   - Deprecated
 browser-compat: api.Event.returnValue
 ---
+
 {{APIRef("DOM")}}{{Deprecated_Header}}
 
 The {{domxref("Event")}} property
@@ -40,3 +41,7 @@ The value of `returnValue` is the opposite of the value returned by
 ## Browser compatibility
 
 {{Compat}}
+
+## See also
+
+- {{domxref("HTMLDialogElement.returnValue")}}: the return value for the {{HTMLElement("dialog")}}.

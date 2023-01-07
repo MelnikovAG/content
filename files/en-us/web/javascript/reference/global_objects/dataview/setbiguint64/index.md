@@ -1,6 +1,7 @@
 ---
 title: DataView.prototype.setBigUint64()
 slug: Web/JavaScript/Reference/Global_Objects/DataView/setBigUint64
+page-type: javascript-instance-method
 tags:
   - BigInt
   - DataView
@@ -12,6 +13,7 @@ tags:
   - setBigUint64
 browser-compat: javascript.builtins.DataView.setBigUint64
 ---
+
 {{JSRef}}
 
 The **`setBigUint64()`** method stores an unsigned 64-bit
@@ -22,7 +24,7 @@ integer (unsigned long long) value at the specified byte offset from the start o
 
 ## Syntax
 
-```js
+```js-nolint
 setBigUint64(byteOffset, value)
 setBigUint64(byteOffset, value, littleEndian)
 ```

@@ -1,6 +1,7 @@
 ---
 title: DataView() constructor
 slug: Web/JavaScript/Reference/Global_Objects/DataView/DataView
+page-type: javascript-constructor
 tags:
   - Constructor
   - DataView
@@ -10,6 +11,7 @@ tags:
   - Polyfill
 browser-compat: javascript.builtins.DataView.DataView
 ---
+
 {{JSRef}}
 
 The **`DataView()`** constructor is used to create {{jsxref("DataView")}} objects.
@@ -18,7 +20,7 @@ The **`DataView()`** constructor is used to create {{jsxref("DataView")}} object
 
 ## Syntax
 
-```js
+```js-nolint
 new DataView(buffer)
 new DataView(buffer, byteOffset)
 new DataView(buffer, byteOffset, byteLength)

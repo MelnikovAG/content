@@ -1,5 +1,5 @@
 ---
-title: 'Window: load event'
+title: "Window: load event"
 slug: Web/API/Window/load_event
 page-type: web-api-event
 tags:
@@ -10,9 +10,11 @@ tags:
   - load
 browser-compat: api.Window.load_event
 ---
+
 {{APIRef}}
 
-The **`load`** event is fired when the whole page has loaded, including all dependent resources such as stylesheets and images. This is in contrast to {{domxref("Document/DOMContentLoaded_event", "DOMContentLoaded")}}, which is fired as soon as the page DOM has been loaded, without waiting for resources to finish loading.
+The **`load`** event is fired when the whole page has loaded, including all dependent resources such as stylesheets, scripts, iframes, and images.
+This is in contrast to {{domxref("Document/DOMContentLoaded_event", "DOMContentLoaded")}}, which is fired as soon as the page DOM has been loaded, without waiting for resources to finish loading.
 
 This event is not cancelable and does not bubble.
 
@@ -25,9 +27,9 @@ This event is not cancelable and does not bubble.
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
 ```js
-addEventListener('load', (event) => {});
+addEventListener("load", (event) => {});
 
-onload = (event) => { };
+onload = (event) => {};
 ```
 
 ## Event type
@@ -39,8 +41,8 @@ A generic {{domxref("Event")}}.
 Log a message when the page is fully loaded:
 
 ```js
-window.addEventListener('load', (event) => {
-  console.log('page is fully loaded');
+window.addEventListener("load", (event) => {
+  console.log("page is fully loaded");
 });
 ```
 
@@ -48,7 +50,7 @@ The same, but using the `onload` event handler property:
 
 ```js
 window.onload = (event) => {
-  console.log('page is fully loaded');
+  console.log("page is fully loaded");
 };
 ```
 
@@ -63,7 +65,12 @@ window.onload = (event) => {
 
 <div class="event-log">
   <label for="eventLog">Event log:</label>
-  <textarea readonly class="event-log-contents" rows="8" cols="30" id="eventLog"></textarea>
+  <textarea
+    readonly
+    class="event-log-contents"
+    rows="8"
+    cols="30"
+    id="eventLog"></textarea>
 </div>
 ```
 
@@ -88,7 +95,8 @@ body {
   resize: none;
 }
 
-label, button {
+label,
+button {
   display: block;
 }
 
@@ -100,25 +108,25 @@ label, button {
 #### JavaScript
 
 ```js
-const log = document.querySelector('.event-log-contents');
-const reload = document.querySelector('#reload');
+const log = document.querySelector(".event-log-contents");
+const reload = document.querySelector("#reload");
 
-reload.addEventListener('click', () => {
-  log.textContent ='';
+reload.addEventListener("click", () => {
+  log.textContent = "";
   setTimeout(() => {
-      window.location.reload(true);
+    window.location.reload(true);
   }, 200);
 });
 
-window.addEventListener('load', (event) => {
-  log.textContent += 'load\n';
+window.addEventListener("load", (event) => {
+  log.textContent += "load\n";
 });
 
-document.addEventListener('readystatechange', (event) => {
+document.addEventListener("readystatechange", (event) => {
   log.textContent += `readystate: ${document.readyState}\n`;
 });
 
-document.addEventListener('DOMContentLoaded', (event) => {
+document.addEventListener("DOMContentLoaded", (event) => {
   log.textContent += `DOMContentLoaded\n`;
 });
 ```
@@ -137,4 +145,9 @@ document.addEventListener('DOMContentLoaded', (event) => {
 
 ## See also
 
-- Related events: {{domxref("Window/DOMContentLoaded_event", "DOMContentLoaded")}}, {{domxref("Document/readystatechange_event", "readystatechange")}}, {{domxref("Window/beforeunload_event", "beforeunload")}}, {{domxref("Window/unload_event", "unload")}}
+- Document [readyState](/en-US/docs/Web/API/Document/readyState) API
+- Related events:
+  - {{domxref("Window/DOMContentLoaded_event", "DOMContentLoaded")}}
+  - {{domxref("Document/readystatechange_event", "readystatechange")}}
+  - {{domxref("Window/beforeunload_event", "beforeunload")}}
+  - {{domxref("Window/unload_event", "unload")}}

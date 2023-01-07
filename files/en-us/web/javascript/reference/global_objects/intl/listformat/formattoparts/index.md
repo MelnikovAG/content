@@ -1,6 +1,7 @@
 ---
 title: Intl.ListFormat.prototype.formatToParts()
 slug: Web/JavaScript/Reference/Global_Objects/Intl/ListFormat/formatToParts
+page-type: javascript-instance-method
 tags:
   - Internationalization
   - Intl
@@ -12,6 +13,7 @@ tags:
   - Reference
 browser-compat: javascript.builtins.Intl.ListFormat.formatToParts
 ---
+
 {{JSRef}}
 
 The **`Intl.ListFormat.prototype.formatToParts()`** method
@@ -22,7 +24,7 @@ can be used to format a list of values in a locale-aware fashion.
 
 ## Syntax
 
-```js
+```js-nolint
 formatToParts(list)
 ```
 

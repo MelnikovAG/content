@@ -11,6 +11,7 @@ tags:
   - status
 browser-compat: api.Response.status
 ---
+
 {{APIRef("Fetch")}}
 
 The **`status`** read-only property of the {{domxref("Response")}} interface contains the [HTTP status codes](/en-US/docs/Web/HTTP/Status) of the response.
@@ -19,7 +20,7 @@ For example, `200` for success, `404` if the resource could not be found.
 
 ## Value
 
-A unsigned short number.
+An unsigned short number.
 This is one of the [HTTP response status codes](/en-US/docs/Web/HTTP/Status).
 
 ## Examples

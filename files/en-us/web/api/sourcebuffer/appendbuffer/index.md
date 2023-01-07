@@ -15,6 +15,7 @@ tags:
   - appendBuffer
 browser-compat: api.SourceBuffer.appendBuffer
 ---
+
 {{APIRef("Media Source Extensions")}}
 
 The **`appendBuffer()`** method of the
@@ -24,14 +25,14 @@ to the `SourceBuffer`.
 
 ## Syntax
 
-```js
+```js-nolint
 appendBuffer(source)
 ```
 
 ### Parameters
 
 - `source`
-  - : Either an {{domxref("ArrayBuffer")}}, a {{jsxref("TypedArray")}} or a {{jsxref("DataView")}} object
+  - : Either an {{jsxref("ArrayBuffer")}}, a {{jsxref("TypedArray")}} or a {{jsxref("DataView")}} object
     that contains the media segment data you want to add to the `SourceBuffer`.
 
 ### Return value

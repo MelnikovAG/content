@@ -1,6 +1,7 @@
 ---
 title: Intl.Locale() constructor
 slug: Web/JavaScript/Reference/Global_Objects/Intl/Locale/Locale
+page-type: javascript-constructor
 tags:
   - Constructor
   - Internationalization
@@ -10,6 +11,7 @@ tags:
   - Reference
 browser-compat: javascript.builtins.Intl.Locale.Locale
 ---
+
 {{JSRef}}
 
 The **`Intl.Locale`** constructor is a
@@ -22,7 +24,7 @@ identifier.
 
 ## Syntax
 
-```js
+```js-nolint
 new Intl.Locale(tag)
 new Intl.Locale(tag, options)
 ```
@@ -34,8 +36,7 @@ new Intl.Locale(tag, options)
 - `tag`
   - : The Unicode locale identifier string.
 - `options`
-  - : An object that contains configuration for the Locale. Keys are Unicode locale tags,
-    values are valid Unicode tag values.
+  - : An object that contains configuration for the Locale. Keys are Unicode locale tags, values are valid Unicode tag values. Option values here take priority over extension keys in the locale identifier.
 
 ## Examples
 
@@ -58,7 +59,7 @@ into the constructor:
 
 ```js
 const locale = new Intl.Locale("en-US", { hourCycle: "h12" });
-console.log(locale.hourCycle); // Prints "h12"
+console.log(locale.hourCycle); // "h12"
 ```
 
 ## Specifications

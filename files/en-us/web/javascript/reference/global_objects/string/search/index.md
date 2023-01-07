@@ -1,6 +1,7 @@
 ---
 title: String.prototype.search()
 slug: Web/JavaScript/Reference/Global_Objects/String/search
+page-type: javascript-instance-method
 tags:
   - JavaScript
   - Method
@@ -11,6 +12,7 @@ tags:
   - Polyfill
 browser-compat: javascript.builtins.String.search
 ---
+
 {{JSRef}}
 
 The **`search()`** method executes a search for a match between a regular expression and this {{jsxref("String")}} object.
@@ -19,7 +21,7 @@ The **`search()`** method executes a search for a match between a regular expres
 
 ## Syntax
 
-```js
+```js-nolint
 search(regexp)
 ```
 

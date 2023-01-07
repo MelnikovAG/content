@@ -1,6 +1,7 @@
 ---
 title: Intl.Locale.prototype.caseFirst
 slug: Web/JavaScript/Reference/Global_Objects/Intl/Locale/caseFirst
+page-type: javascript-instance-accessor-property
 tags:
   - Internationalization
   - Intl
@@ -12,6 +13,7 @@ tags:
   - Reference
 browser-compat: javascript.builtins.Intl.Locale.caseFirst
 ---
+
 {{JSRef}}
 
 The **`Intl.Locale.prototype.caseFirst`** property is an accessor property that returns whether case is taken into account for the locale's collation rules.

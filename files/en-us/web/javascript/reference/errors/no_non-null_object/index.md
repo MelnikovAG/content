@@ -1,12 +1,14 @@
 ---
 title: 'TypeError: "x" is not a non-null object'
 slug: Web/JavaScript/Reference/Errors/No_non-null_object
+page-type: javascript-error
 tags:
   - Error
   - Errors
   - JavaScript
   - TypeError
 ---
+
 {{JSSidebar("Errors")}}
 
 The JavaScript exception "is not a non-null object" occurs when an object is expected

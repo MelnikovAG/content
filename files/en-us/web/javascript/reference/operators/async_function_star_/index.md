@@ -1,6 +1,7 @@
 ---
 title: async function* expression
 slug: Web/JavaScript/Reference/Operators/async_function*
+page-type: javascript-operator
 tags:
   - Function
   - Iterator
@@ -10,6 +11,7 @@ tags:
   - Primary Expression
 browser-compat: javascript.operators.async_generator_function
 ---
+
 {{jsSidebar("Operators")}}
 
 The **`async function*`** keywords can be used to define an asynchronous generator function inside an expression.
@@ -18,7 +20,7 @@ The **`async function*`** keywords can be used to define an asynchronous generat
 
 ## Syntax
 
-```js
+```js-nolint
 async function* (param0) {
   statements
 }
@@ -55,7 +57,7 @@ An `async function*` expression is very similar to and has almost the same synta
 
 ## Examples
 
-### Using async function*
+### Using async function\*
 
 The following example defines an unnamed asynchronous generator function and assigns it to `x`. The function yields the square of its argument:
 
@@ -63,7 +65,9 @@ The following example defines an unnamed asynchronous generator function and ass
 const x = async function* (y) {
   yield Promise.resolve(y * y);
 };
-x(6).next().then((res) => console.log(res.value)); // logs 36
+x(6)
+  .next()
+  .then((res) => console.log(res.value)); // 36
 ```
 
 ## Specifications

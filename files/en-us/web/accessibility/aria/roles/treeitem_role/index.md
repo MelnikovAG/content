@@ -1,5 +1,5 @@
 ---
-title: 'ARIA: treeitem role'
+title: "ARIA: treeitem role"
 slug: Web/Accessibility/ARIA/Roles/treeitem_role
 tags:
   - Accessibility
@@ -37,7 +37,7 @@ Trees can be "single-select", allowing users to choose just one `treeitem` for a
 
 In single-select trees, only one treeitem can have [`aria-selected`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-selected) (or [`aria-checked`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-checked)) set to `true`. When a single-select tree receives focus, if no `treeitem` is selected before the tree receives focus, focus is set on the first `treeitem`. If a `treeitem` is selected before the tree receives focus, focus is set on the single `treeitem` that has `aria-selected="true"` set.
 
-All nodes that are selectable but not selected have either `aria-selected` or `aria-checked` set to `false`.  If the tree contains nodes that are not selectable, do not include either `aria-selected` or `aria-checked`, as the presence of either attribute indicates to assistive technologies the node is selectable.
+All nodes that are selectable but not selected have either `aria-selected` or `aria-checked` set to `false`. If the tree contains nodes that are not selectable, do not include either `aria-selected` or `aria-checked`, as the presence of either attribute indicates to assistive technologies the node is selectable.
 
 No more than one node can be selected at a time unless the `tree` node has [`aria-multiselectable="true"`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-multiselectable) set.
 
@@ -61,13 +61,12 @@ A `treeitem` is required to have an accessible name. Generally, that name comes 
   - : The root node for the hierarchical list of parent and child `treeitem` nodes that can expand and collapse
 - [`group`](/en-US/docs/Web/Accessibility/ARIA/Roles/group_role) role
   - : Identifies a set of `treeitem` child nodes.
-
 - [`aria-expanded`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-expanded)
   - : Set on the root `tree` and on `group` nodes that are parents of `treeitem` nodes, to indicate whether the tree view is expanded (`true`) or collapsed (`false`).
 - [`aria-selected`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-selected)
-  - Set to `true` or `false`, indicates a `treeitem` is selectable, and whether or not it is currently selected.
+  - : Set to `true` or `false`, indicates a `treeitem` is selectable, and whether or not it is currently selected.
 - [`aria-checked`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-checked)
-  - Set to `true` or `false`, indicates the `treeitem` can be checked, and whether or not it is currently checked.
+  - : Set to `true` or `false`, indicates the `treeitem` can be checked, and whether or not it is currently checked.
 
 ### Keyboard interactions
 
@@ -79,7 +78,7 @@ For a vertically oriented `tree`, which is the default orientation:
 <td>
 <ul>
 <li>When focus is on a closed node, opens the node; focus does not move.
-<li>When focus is on a open node, moves focus to the first child node.
+<li>When focus is on an open node, moves focus to the first child node.
 <li>When focus is on an end node (a tree item with no children), does nothing.
 </td>
 </tr>
@@ -139,7 +138,7 @@ For a vertically oriented `tree`, which is the default orientation:
 
 There are two interaction models for multi-select trees: While you can require that users press a modifier key, such as <kbd>Shift</kbd> or <kbd>Control</kbd> while navigating the list in order to avoid losing selection states, the model that does not require the user to hold a modifier key is recommended.
 
-#### Recommended multi user select model:
+#### Recommended multi user select model
 
 <table>
 <tr>
@@ -184,48 +183,46 @@ The following is how one might mark up a directory listing of web development co
 
 ```html
 <div>
-<h3 id="treeLabel">
-  Developer Learning Path
-</h3>
-<ul role="tree" aria-labelledby="treeLabel">
-  <li role="treeitem" aria-expanded="true">
-    <span>Web</span>
-    <ul role="group">
-      <li role="treeitem" aria-expanded="false">
-        <span>Languages</span>
-        <ul role="group">
-          <li role="treeitem" aria-expanded="false">
-            <span>HTML</span>
-            <ul role="group">
-              <li role="treeitem">Document structure</li>
-              <li role="treeitem">Head elements</li>
-              <li role="treeitem">Semantic elements</li>
-              <li role="treeitem">Attributes</li>
-              <li role="treeitem">Web forms</li>
-            </ul>
-          </li>
-          <li role="treeitem">CSS</li>
-          <li role="treeitem">JavaScript</li>
-        </ul>
-      </li>
-      <li role="treeitem" aria-expanded="false">
-        <span>Accessibility</span>
-        <ul role="group">
-          <li role="treeitem" aria-label="accessibility object model">AOM</li>
-          <li role="treeitem">WCAG</li>
-          <li role="treeitem">ARIA</li>
-        </ul>
-      </li>
-      <li role="treeitem" aria-expanded="false">
-        <span>Web Performance</span>
-        <ul role="group">
-          <li role="treeitem">Load time</li>
-        </ul>
-      </li>
-      <li role="treeitem">APIs</li>
-    </ul>
-  </li>
-</ul>
+  <h3 id="treeLabel">Developer Learning Path</h3>
+  <ul role="tree" aria-labelledby="treeLabel">
+    <li role="treeitem" aria-expanded="true">
+      <span>Web</span>
+      <ul role="group">
+        <li role="treeitem" aria-expanded="false">
+          <span>Languages</span>
+          <ul role="group">
+            <li role="treeitem" aria-expanded="false">
+              <span>HTML</span>
+              <ul role="group">
+                <li role="treeitem">Document structure</li>
+                <li role="treeitem">Head elements</li>
+                <li role="treeitem">Semantic elements</li>
+                <li role="treeitem">Attributes</li>
+                <li role="treeitem">Web forms</li>
+              </ul>
+            </li>
+            <li role="treeitem">CSS</li>
+            <li role="treeitem">JavaScript</li>
+          </ul>
+        </li>
+        <li role="treeitem" aria-expanded="false">
+          <span>Accessibility</span>
+          <ul role="group">
+            <li role="treeitem" aria-label="accessibility object model">AOM</li>
+            <li role="treeitem">WCAG</li>
+            <li role="treeitem">ARIA</li>
+          </ul>
+        </li>
+        <li role="treeitem" aria-expanded="false">
+          <span>Web Performance</span>
+          <ul role="group">
+            <li role="treeitem">Load time</li>
+          </ul>
+        </li>
+        <li role="treeitem">APIs</li>
+      </ul>
+    </li>
+  </ul>
 </div>
 ```
 
@@ -247,6 +244,6 @@ If the tree has more than 7 tree items, including type ahead functionality is re
 
 1. [**WAI-ARIA roles**](/en-US/docs/Web/Accessibility/ARIA/Roles)
 
-    {{ListSubpagesForSidebar("/en-US/docs/Web/Accessibility/ARIA/Roles")}}
+   {{ListSubpagesForSidebar("/en-US/docs/Web/Accessibility/ARIA/Roles")}}
 
 </section>

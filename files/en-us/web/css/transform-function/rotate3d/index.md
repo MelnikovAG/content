@@ -1,6 +1,7 @@
 ---
 title: rotate3d()
 slug: Web/CSS/transform-function/rotate3d
+page-type: css-function
 tags:
   - CSS
   - CSS Function
@@ -9,6 +10,7 @@ tags:
   - Reference
 browser-compat: css.types.transform-function.rotate3d
 ---
+
 {{CSSRef}}
 
 The **`rotate3d()`** [CSS](/en-US/docs/Web/CSS) [function](/en-US/docs/Web/CSS/CSS_Functions) defines a transformation that rotates an element around a
@@ -40,13 +42,13 @@ rotate3d(x, y, z, a)
 
 - `x`
   - : Is a {{cssxref("&lt;number&gt;")}} describing the x-coordinate of the vector denoting the axis of rotation which
-    could be between 0 and 1.
+    can be a positive or negative number.
 - `y`
   - : Is a {{cssxref("&lt;number&gt;")}} describing the y-coordinate of the vector denoting the axis of rotation which
-    could be between 0 and 1.
+    can be a positive or negative number.
 - `z`
   - : Is a {{cssxref("&lt;number&gt;")}} describing the z-coordinate of the vector denoting the axis of rotation which
-    could be between 0 and 1.
+    can be a positive or negative number.
 - `a`
   - : Is an {{ cssxref("&lt;angle&gt;") }} representing the angle of the rotation. A positive angle denotes a clockwise
     rotation, a negative angle a counter-clockwise one.
@@ -335,5 +337,6 @@ div {
 
 ## See also
 
-- {{cssxref("transform")}}
+- {{cssxref("transform")}} property
+- {{cssxref("rotate")}} property
 - {{cssxref("&lt;transform-function&gt;")}}

@@ -11,18 +11,9 @@ tags:
 browser-compat: html.elements.marquee
 ---
 
-{{Deprecated_Header}}
+{{HTMLSidebar}}{{Deprecated_Header}}
 
 The **`<marquee>`** [HTML](/en-US/docs/Web/HTML) element is used to insert a scrolling area of text. You can control what happens when the text reaches the edges of its content area using its attributes.
-
-<table class="properties">
-  <tbody>
-    <tr>
-      <th scope="row">DOM interface</th>
-      <td>{{DOMxRef("HTMLMarqueeElement")}}</td>
-    </tr>
-  </tbody>
-</table>
 
 ## Attributes
 
@@ -41,9 +32,9 @@ The **`<marquee>`** [HTML](/en-US/docs/Web/HTML) element is used to insert a scr
 - {{htmlattrdef("scrollamount")}} {{Deprecated_Inline}}
   - : Sets the amount of scrolling at each interval in pixels. The default value is 6.
 - {{htmlattrdef("scrolldelay")}} {{Deprecated_Inline}}
-  - : Sets the interval between each scroll movement in milliseconds. The default value is 85. Note that any value smaller than 60 is ignored and the value 60 is used instead, unless` truespeed `is specified.
+  - : Sets the interval between each scroll movement in milliseconds. The default value is 85. Note that any value smaller than 60 is ignored and the value 60 is used instead unless `truespeed` is specified.
 - {{htmlattrdef("truespeed")}} {{Deprecated_Inline}}
-  - : By default,` scrolldelay `values lower than 60 are ignored. If` truespeed `is present, those values are not ignored.
+  - : By default, `scrolldelay` values lower than 60 are ignored. If `truespeed` is present, those values are not ignored.
 - {{htmlattrdef("vspace")}} {{Deprecated_Inline}}
   - : Sets the vertical margin in pixels or percentage value.
 - {{htmlattrdef("width")}} {{Deprecated_Inline}}
@@ -72,14 +63,28 @@ The **`<marquee>`** [HTML](/en-US/docs/Web/HTML) element is used to insert a scr
 
 <marquee direction="up">This text will scroll from bottom to top</marquee>
 
-<marquee direction="down" width="250" height="200" behavior="alternate" style="border:solid">
-  <marquee behavior="alternate">
-    This text will bounce
-  </marquee>
+<marquee
+  direction="down"
+  width="250"
+  height="200"
+  behavior="alternate"
+  style="border:solid">
+  <marquee behavior="alternate"> This text will bounce </marquee>
 </marquee>
 ```
 
 {{EmbedLiveSample("Examples", 600, 450)}}
+
+## Technical Summary
+
+<table class="properties">
+  <tbody>
+    <tr>
+      <th scope="row">DOM interface</th>
+      <td>{{DOMxRef("HTMLMarqueeElement")}}</td>
+    </tr>
+  </tbody>
+</table>
 
 ## Specifications
 

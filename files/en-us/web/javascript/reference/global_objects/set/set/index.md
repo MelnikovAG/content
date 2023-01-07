@@ -1,6 +1,7 @@
 ---
 title: Set() constructor
 slug: Web/JavaScript/Reference/Global_Objects/Set/Set
+page-type: javascript-constructor
 tags:
   - Constructor
   - JavaScript
@@ -9,6 +10,7 @@ tags:
   - Polyfill
 browser-compat: javascript.builtins.Set.Set
 ---
+
 {{JSRef}}
 
 The **`Set` constructor** lets you
@@ -19,7 +21,7 @@ references.
 
 ## Syntax
 
-```js
+```js-nolint
 new Set()
 new Set(iterable)
 ```
@@ -50,7 +52,7 @@ const mySet = new Set();
 mySet.add(1); // Set [ 1 ]
 mySet.add(5); // Set [ 1, 5 ]
 mySet.add(5); // Set [ 1, 5 ]
-mySet.add('some text'); // Set [ 1, 5, 'some text' ]
+mySet.add("some text"); // Set [ 1, 5, 'some text' ]
 const o = { a: 1, b: 2 };
 mySet.add(o);
 ```

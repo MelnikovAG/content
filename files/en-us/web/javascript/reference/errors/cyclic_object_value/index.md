@@ -1,12 +1,14 @@
 ---
 title: 'TypeError: cyclic object value'
 slug: Web/JavaScript/Reference/Errors/Cyclic_object_value
+page-type: javascript-error
 tags:
   - Error
   - Errors
   - JavaScript
   - TypeError
 ---
+
 {{jsSidebar("Errors")}}
 
 The JavaScript exception "cyclic object value" occurs when object references were found

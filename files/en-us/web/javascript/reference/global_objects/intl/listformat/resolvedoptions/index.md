@@ -1,6 +1,7 @@
 ---
 title: Intl.ListFormat.prototype.resolvedOptions()
 slug: Web/JavaScript/Reference/Global_Objects/Intl/ListFormat/resolvedOptions
+page-type: javascript-instance-method
 tags:
   - Internationalization
   - Intl
@@ -11,6 +12,7 @@ tags:
   - Reference
 browser-compat: javascript.builtins.Intl.ListFormat.resolvedOptions
 ---
+
 {{JSRef}}
 
 The **`Intl.ListFormat.prototype.resolvedOptions()`** method
@@ -24,7 +26,7 @@ object.
 
 ## Syntax
 
-```js
+```js-nolint
 listFormat.resolvedOptions()
 ```
 

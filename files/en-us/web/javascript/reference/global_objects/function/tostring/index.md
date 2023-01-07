@@ -1,6 +1,7 @@
 ---
 title: Function.prototype.toString()
 slug: Web/JavaScript/Reference/Global_Objects/Function/toString
+page-type: javascript-instance-method
 tags:
   - Function
   - JavaScript
@@ -8,6 +9,7 @@ tags:
   - Prototype
 browser-compat: javascript.builtins.Function.toString
 ---
+
 {{JSRef}}
 
 The **`toString()`** method returns a string representing the source code of the specified {{jsxref("Function")}}.
@@ -16,7 +18,7 @@ The **`toString()`** method returns a string representing the source code of the
 
 ## Syntax
 
-```js
+```js-nolint
 toString()
 ```
 

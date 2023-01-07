@@ -12,6 +12,7 @@ tags:
   - SVGAltGlyphRefElement
 browser-compat: api.SVGAltGlyphElement.glyphRef
 ---
+
 {{APIRef("SVGAltGlyphElement")}}{{Deprecated_Header}}
 
 The **`SVGAltGlyphElement.glyphRef`** property is a
@@ -27,7 +28,7 @@ format of the given font.
 ## Examples
 
 ```js
-myGlyph.glypRef = "#glyphID";
+myGlyph.glyphRef = "#glyphID";
 ```
 
 ## Specifications

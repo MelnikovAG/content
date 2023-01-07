@@ -1,11 +1,13 @@
 ---
 title: 'Warning: expression closures are deprecated'
 slug: Web/JavaScript/Reference/Errors/Deprecated_expression_closures
+page-type: javascript-error
 tags:
   - Error
   - JavaScript
   - Warning
 ---
+
 {{jsSidebar("Errors")}}
 
 The JavaScript warning "expression closures are deprecated" occurs when the
